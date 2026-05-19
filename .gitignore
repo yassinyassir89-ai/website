@@ -43,10 +43,14 @@ yarn-error.log*
 # TypeScript
 *.tsbuildinfo
 
-# Prisma
+# Prisma databases (SQLite)
 /prisma/migrations/dev.db*
 /prisma/*.db
 /prisma/*.db-journal
+/prisma/prisma/*.db
+/prisma/prisma/*.db-journal
+**/dev.db
+**/dev.db-journal
 
 # OS
 *.swp
