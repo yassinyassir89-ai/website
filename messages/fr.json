@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "title": "Grow Beauty — Beauté de Luxe",
+    "description": "Découvrez Grow Beauty, votre destination pour des produits de beauté de luxe au Maroc. Soins, maquillage, K-Beauty et coffrets cadeaux."
+  },
+  "announcement": {
+    "messages": [
+      "✨ Livraison gratuite à partir de 500 DH ✨",
+      "🌸 Nouveau : Collection K-Beauty disponible",
+      "💛 Paiement à la livraison disponible partout au Maroc"
+    ]
+  },
+  "nav": {
+    "boutique": "Boutique",
+    "categories": "Catégories",
+    "marques": "Marques",
+    "promotions": "Promotions",
+    "search_placeholder": "Rechercher un produit...",
+    "cart": "Panier",
+    "wishlist": "Favoris",
+    "account": "Mon compte",
+    "login": "Connexion",
+    "tagline": "Beauté de Luxe"
+  },
+  "hero": {
+    "badge": "Nouvelle Collection",
+    "title": "Révélez votre",
+    "title_accent": "éclat naturel",
+    "subtitle": "Des soins de luxe formulés avec les ingrédients les plus précieux pour une peau radieuse et sublimée.",
+    "cta_primary": "Découvrir la Collection",
+    "cta_secondary": "Voir tout"
+  },
+  "categories": {
+    "title": "Explorez nos",
+    "title_accent": "Catégories",
+    "subtitle": "Une sélection raffinée pour chaque besoin",
+    "items": {
+      "soin_visage": "Soin du visage",
+      "maquillage": "Maquillage",
+      "cheveux": "Cheveux",
+      "k_beauty": "K-Beauty",
+      "solaire": "Protection solaire",
+      "coffrets": "Coffrets cadeaux"
+    }
+  },
+  "featured": {
+    "title": "Produits",
+    "title_accent": "Vedettes",
+    "subtitle": "Une sélection de nos meilleures références",
+    "new": "Nouveau",
+    "bestseller": "Bestseller",
+    "add_to_cart": "Ajouter au panier",
+    "add_to_wishlist": "Ajouter aux favoris",
+    "reviews": "avis",
+    "mad": "DH"
+  },
+  "promo": {
+    "badge": "Offre Spéciale",
+    "title": "Jusqu'à",
+    "title_accent": "-40%",
+    "subtitle": "sur la collection été",
+    "cta": "Découvrir les offres",
+    "ends": "Offre limitée"
+  },
+  "bestsellers": {
+    "title": "Meilleures",
+    "title_accent": "Ventes",
+    "subtitle": "Les incontournables adorés par nos clientes",
+    "view_all": "Voir tout"
+  },
+  "testimonials": {
+    "title": "Ce que disent",
+    "title_accent": "nos clientes",
+    "subtitle": "Témoignages authentiques de notre communauté"
+  },
+  "newsletter": {
+    "title": "Rejoignez la famille",
+    "title_accent": "Grow Beauty",
+    "subtitle": "Recevez en avant-première nos nouvelles collections, conseils beauté et offres exclusives.",
+    "placeholder": "Votre adresse email",
+    "cta": "S'abonner",
+    "privacy": "Pas de spam. Désabonnement en un clic.",
+    "success": "Merci ! Vous êtes maintenant abonnée. 🌸"
+  },
+  "gallery": {
+    "title": "@growbeauty.ma",
+    "subtitle": "Rejoignez notre communauté sur Instagram"
+  },
+  "footer": {
+    "tagline": "Votre destination de beauté luxueuse au Maroc. Soins d'exception, maquillage sublime, K-Beauty et parfums envoûtants.",
+    "boutique": "Boutique",
+    "help": "Aide",
+    "contact": "Contact",
+    "links": {
+      "shop": "Boutique",
+      "new": "Nouveautés",
+      "bestsellers": "Meilleures ventes",
+      "promos": "Promotions",
+      "about": "À propos",
+      "faq": "FAQ",
+      "shipping": "Politique de livraison",
+      "returns": "Retours & échanges",
+      "privacy": "Confidentialité",
+      "terms": "CGV"
+    },
+    "address": "123 Boulevard Moulay Youssef, Tanger, Maroc",
+    "phone": "+212 600 000 000",
+    "email": "bonjour@growbeauty.ma",
+    "hours": "Lun – Sam : 9h – 19h",
+    "hours_sun": "Dimanche : 10h – 17h",
+    "payment": "Paiement sécurisé",
+    "cod": "Paiement à la livraison",
+    "rights": "© 2026 Grow Beauty · Tous droits réservés",
+    "made_with": "Fait avec ♥ au Maroc"
+  },
+  "whatsapp": {
+    "message": "Bonjour ! Je suis intéressée par vos produits de beauté."
+  },
+  "product": {
+    "add_to_cart": "Ajouter au panier",
+    "add_to_wishlist": "Favoris",
+    "new": "Nouveau",
+    "bestseller": "Bestseller",
+    "sale": "Promo"
+  }
+}

@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Shadcn tokens — soft pink theme */
+    --background: 350 100% 99%;
+    --foreground: 0 0% 17%;
+    --card: 350 100% 99%;
+    --card-foreground: 0 0% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 17%;
+    --primary: 340 83% 75%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 340 100% 96%;
+    --secondary-foreground: 0 0% 17%;
+    --muted: 340 30% 95%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 37 50% 68%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 340 30% 90%;
+    --input: 340 30% 90%;
+    --ring: 340 83% 75%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Set CSS font variables based on locale class on <html> */
+  html.locale-fr {
+    --font-heading: var(--font-playfair);
+    --font-body: var(--font-poppins);
+  }
+
+  html.locale-ar {
+    --font-heading: var(--font-tajawal);
+    --font-body: var(--font-almarai);
+  }
+
+  body {
+    @apply bg-cream text-ink font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+
+  [dir="rtl"] {
+    text-align: right;
+  }
+}
+
+@layer components {
+  .luxury-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply font-serif text-3xl md:text-4xl lg:text-5xl text-ink font-normal leading-tight;
+  }
+
+  .section-subtitle {
+    @apply font-sans text-sm uppercase tracking-[0.2em] text-primary font-medium;
+  }
+
+  .gold-divider {
+    @apply w-16 h-0.5 bg-gold mx-auto my-4;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white font-sans text-sm font-medium rounded-full transition-all duration-300 hover:bg-primary-dark hover:shadow-pink-lg active:scale-95;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold text-white font-sans text-sm font-medium rounded-full transition-all duration-300 hover:bg-gold-dark hover:shadow-luxury active:scale-95;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-gold text-gold font-sans text-sm font-medium rounded-full transition-all duration-300 hover:bg-gold hover:text-white active:scale-95;
+  }
+
+  .card-product {
+    @apply bg-white rounded-2xl shadow-soft overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-pink-lg;
+  }
+
+  .glass-nav {
+    @apply bg-white/80 backdrop-blur-md border-b border-primary/10 shadow-sm;
+  }
+
+  .skeleton {
+    @apply animate-pulse bg-primary-light rounded;
+  }
+
+  .gold-ring {
+    @apply ring-2 ring-gold ring-offset-2;
+  }
+
+  /* Scroll-reveal base state (overridden by Framer Motion) */
+  .reveal {
+    @apply opacity-0 translate-y-8;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .aspect-product {
+    aspect-ratio: 3/4;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #FCE4EC; }
+::-webkit-scrollbar-thumb { background: #F48FB1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #E91E63; }
+
+/* RTL scroll direction */
+[dir="rtl"] ::-webkit-scrollbar-thumb { background: #F48FB1; }
