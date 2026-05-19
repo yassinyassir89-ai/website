@@ -122,5 +122,51 @@
     "new": "Nouveau",
     "bestseller": "Bestseller",
     "sale": "Promo"
+  },
+  "shop": {
+    "title": "Notre Boutique",
+    "subtitle": "Explorez toute notre collection de beauté",
+    "filter_by": "Filtrer par",
+    "category": "Catégorie",
+    "price": "Prix",
+    "rating": "Note",
+    "sort_by": "Trier par",
+    "sort_options": {
+      "featured": "En vedette",
+      "price_asc": "Prix croissant",
+      "price_desc": "Prix décroissant",
+      "newest": "Nouveautés",
+      "rating": "Mieux notés"
+    },
+    "all_categories": "Toutes les catégories",
+    "showing": "Affichage de {count} produits",
+    "no_products": "Aucun produit trouvé",
+    "clear_filters": "Effacer les filtres",
+    "back_to_shop": "Retour à la boutique",
+    "products_count": "{count} produits",
+    "loading": "Chargement..."
+  },
+  "categories_page": {
+    "title": "Nos Catégories",
+    "subtitle": "Découvrez tous nos univers beauté",
+    "products": "produits",
+    "explore": "Explorer"
+  },
+  "product_detail": {
+    "in_stock": "En stock",
+    "out_of_stock": "Rupture de stock",
+    "free_shipping": "Livraison gratuite dès 500 DH",
+    "cod_available": "Paiement à la livraison disponible",
+    "return_policy": "Retours sous 14 jours",
+    "description": "Description",
+    "details": "Détails",
+    "reviews": "Avis",
+    "share": "Partager",
+    "quantity": "Quantité",
+    "related_products": "Produits similaires",
+    "view_details": "Voir détails",
+    "added_to_cart": "Ajouté au panier",
+    "view_cart": "Voir le panier",
+    "continue_shopping": "Continuer mes achats"
   }
 }

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 import { motion } from 'framer-motion'
 import { Heart, Star, ShoppingBag } from 'lucide-react'
@@ -36,7 +37,7 @@ export function HomepageProductCard({ product }: HomepageProductCardProps) {
       transition={{ duration: 0.3, ease: 'easeOut' }}
     >
       {/* Image */}
-      <div className="relative aspect-product overflow-hidden bg-primary-light rounded-t-2xl">
+      <Link href={`/${locale}/produit/${product.id}`} className="relative aspect-product overflow-hidden bg-primary-light rounded-t-2xl block">
         <Image
           src={product.image}
           alt={name}
@@ -58,9 +59,9 @@ export function HomepageProductCard({ product }: HomepageProductCardProps) {
 
         {/* Wishlist */}
         <button
-          onClick={() => setWished((w) => !w)}
+          onClick={(e) => { e.preventDefault(); e.stopPropagation(); setWished((w) => !w) }}
           aria-label={t('add_to_wishlist')}
-          className="absolute top-3 end-3 w-8 h-8 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-sm transition-all duration-200 hover:scale-110"
+          className="absolute top-3 end-3 w-8 h-8 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-sm transition-all duration-200 hover:scale-110 z-10"
         >
           <Heart
             size={15}
@@ -78,7 +79,7 @@ export function HomepageProductCard({ product }: HomepageProductCardProps) {
             {added ? (locale === 'ar' ? '✓ تمت الإضافة' : '✓ Ajouté') : t('add_to_cart')}
           </button>
         </div>
-      </div>
+      </Link>
 
       {/* Info */}
       <div className="flex flex-col flex-1 p-4 gap-2">

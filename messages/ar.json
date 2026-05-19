@@ -122,5 +122,51 @@
     "new": "جديد",
     "bestseller": "الأكثر مبيعاً",
     "sale": "خصم"
+  },
+  "shop": {
+    "title": "متجرنا",
+    "subtitle": "اكتشفي تشكيلتنا الكاملة من منتجات الجمال",
+    "filter_by": "تصفية حسب",
+    "category": "الفئة",
+    "price": "السعر",
+    "rating": "التقييم",
+    "sort_by": "ترتيب حسب",
+    "sort_options": {
+      "featured": "المميزة",
+      "price_asc": "السعر تصاعدياً",
+      "price_desc": "السعر تنازلياً",
+      "newest": "الأحدث",
+      "rating": "الأعلى تقييماً"
+    },
+    "all_categories": "جميع الفئات",
+    "showing": "عرض {count} منتج",
+    "no_products": "لا توجد منتجات",
+    "clear_filters": "مسح الفلاتر",
+    "back_to_shop": "العودة إلى المتجر",
+    "products_count": "{count} منتج",
+    "loading": "جارٍ التحميل..."
+  },
+  "categories_page": {
+    "title": "فئاتنا",
+    "subtitle": "اكتشفي جميع عوالم الجمال لدينا",
+    "products": "منتج",
+    "explore": "استكشف"
+  },
+  "product_detail": {
+    "in_stock": "متوفر",
+    "out_of_stock": "غير متوفر",
+    "free_shipping": "توصيل مجاني للطلبات فوق 500 د.م",
+    "cod_available": "الدفع عند الاستلام متاح",
+    "return_policy": "إرجاع خلال 14 يوم",
+    "description": "الوصف",
+    "details": "التفاصيل",
+    "reviews": "التقييمات",
+    "share": "مشاركة",
+    "quantity": "الكمية",
+    "related_products": "منتجات مشابهة",
+    "view_details": "عرض التفاصيل",
+    "added_to_cart": "تمت الإضافة إلى السلة",
+    "view_cart": "عرض السلة",
+    "continue_shopping": "متابعة التسوق"
   }
 }
