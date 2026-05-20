@@ -8,6 +8,8 @@ import { Search, ShoppingBag, Heart, Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { AnnouncementBar } from './announcement-bar'
 import { LanguageSwitcher } from './language-switcher'
+import { useCartStore } from '@/store/cartStore'
+import { useWishlistStore } from '@/store/wishlistStore'
 
 export function Navbar() {
   const t = useTranslations('nav')
@@ -16,6 +18,9 @@ export function Navbar() {
   const [isMobileOpen, setIsMobileOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
+
+  const cartCount = useCartStore((s) => s.getItemCount())
+  const wishCount = useWishlistStore((s) => s.count())
 
   const base = `/${locale}`
 
@@ -98,6 +103,16 @@ export function Navbar() {
                 aria-label={t('wishlist')}
               >
                 <Heart size={20} />
+                {mounted && wishCount > 0 && (
+                  <motion.span
+                    key={wishCount}
+                    initial={{ scale: 0.5 }}
+                    animate={{ scale: 1 }}
+                    className="absolute -top-0.5 -end-0.5 min-w-[18px] h-[18px] px-1 bg-primary text-white text-[10px] font-bold flex items-center justify-center rounded-full shadow-sm"
+                  >
+                    {wishCount}
+                  </motion.span>
+                )}
               </Link>
 
               <Link
@@ -106,6 +121,16 @@ export function Navbar() {
                 aria-label={t('cart')}
               >
                 <ShoppingBag size={20} />
+                {mounted && cartCount > 0 && (
+                  <motion.span
+                    key={cartCount}
+                    initial={{ scale: 0.5 }}
+                    animate={{ scale: 1 }}
+                    className="absolute -top-0.5 -end-0.5 min-w-[18px] h-[18px] px-1 bg-gold text-white text-[10px] font-bold flex items-center justify-center rounded-full shadow-sm"
+                  >
+                    {cartCount}
+                  </motion.span>
+                )}
               </Link>
             </div>
           </div>

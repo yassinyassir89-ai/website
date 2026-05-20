@@ -194,5 +194,71 @@
     "back_to_brands": "Retour aux marques",
     "all_products": "Tous les produits de la marque",
     "no_products": "Aucun produit pour cette marque"
+  },
+  "cart": {
+    "title": "Mon Panier",
+    "subtitle": "Vérifiez vos articles avant de commander",
+    "empty_title": "Votre panier est vide",
+    "empty_subtitle": "Découvrez nos produits et ajoutez vos favoris",
+    "continue_shopping": "Continuer mes achats",
+    "item": "article",
+    "items": "articles",
+    "quantity": "Quantité",
+    "remove": "Retirer",
+    "subtotal": "Sous-total",
+    "shipping": "Livraison",
+    "shipping_free": "Gratuite",
+    "shipping_cost": "30 DH",
+    "free_shipping_message": "Plus que {amount} DH pour la livraison gratuite",
+    "total": "Total",
+    "checkout": "Passer la commande",
+    "clear_cart": "Vider le panier"
+  },
+  "wishlist": {
+    "title": "Mes Favoris",
+    "subtitle": "Les produits que vous aimez",
+    "empty_title": "Aucun favori pour le moment",
+    "empty_subtitle": "Cliquez sur le cœur des produits que vous aimez pour les sauvegarder",
+    "explore_shop": "Explorer la boutique",
+    "items_count": "{count} produit(s) sauvegardé(s)",
+    "clear_all": "Tout effacer"
+  },
+  "checkout": {
+    "title": "Finaliser la commande",
+    "subtitle": "Vos informations pour la livraison",
+    "contact_info": "Informations de contact",
+    "full_name": "Nom complet",
+    "full_name_placeholder": "Ex: Sara El Amrani",
+    "phone": "Numéro de téléphone",
+    "phone_placeholder": "+212 6 00 00 00 00",
+    "city": "Ville",
+    "city_placeholder": "Ex: Casablanca, Rabat, Marrakech",
+    "address": "Adresse (optionnel)",
+    "address_placeholder": "Rue, numéro, quartier...",
+    "notes": "Note pour le livreur (optionnel)",
+    "notes_placeholder": "Horaire de livraison préféré, instructions...",
+    "payment_method": "Mode de paiement",
+    "cod_title": "Paiement à la livraison",
+    "cod_description": "Payez en espèces lors de la réception de votre commande",
+    "order_summary": "Récapitulatif de la commande",
+    "place_order": "Confirmer la commande",
+    "processing": "Traitement en cours...",
+    "errors": {
+      "name_required": "Veuillez entrer votre nom",
+      "phone_required": "Veuillez entrer votre numéro de téléphone",
+      "phone_invalid": "Format de téléphone invalide",
+      "city_required": "Veuillez entrer votre ville"
+    }
+  },
+  "confirmation": {
+    "title": "Commande confirmée !",
+    "subtitle": "Merci pour votre confiance",
+    "order_number": "Numéro de commande",
+    "details": "Vous recevrez bientôt un appel de notre équipe pour confirmer votre commande et organiser la livraison.",
+    "delivery_time": "Délai de livraison estimé : 2 à 4 jours ouvrables",
+    "payment_method_label": "Mode de paiement",
+    "cod_label": "Paiement à la livraison",
+    "continue_shopping": "Continuer mes achats",
+    "back_to_home": "Retour à l'accueil"
   }
 }

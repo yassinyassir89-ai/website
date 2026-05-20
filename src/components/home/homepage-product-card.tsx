@@ -1,12 +1,14 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 import { motion } from 'framer-motion'
 import { Heart, Star, ShoppingBag } from 'lucide-react'
 import type { MockProduct } from '@/lib/data'
+import { useCartStore } from '@/store/cartStore'
+import { useWishlistStore } from '@/store/wishlistStore'
 
 interface HomepageProductCardProps {
   product: MockProduct
@@ -15,8 +17,14 @@ interface HomepageProductCardProps {
 export function HomepageProductCard({ product }: HomepageProductCardProps) {
   const t = useTranslations('product')
   const locale = useLocale()
-  const [wished, setWished] = useState(false)
   const [added, setAdded] = useState(false)
+  const [mounted, setMounted] = useState(false)
+
+  const addItem = useCartStore((s) => s.addItem)
+  const toggleWish = useWishlistStore((s) => s.toggleItem)
+  const isWishlisted = useWishlistStore((s) => s.isWishlisted)
+
+  useEffect(() => setMounted(true), [])
 
   const name = locale === 'ar' ? product.name.ar : product.name.fr
   const badge = product.badge ? (locale === 'ar' ? product.badge.ar : product.badge.fr) : null
@@ -24,10 +32,34 @@ export function HomepageProductCard({ product }: HomepageProductCardProps) {
     ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
     : null
 
+  const wished = mounted ? isWishlisted(product.id) : false
+
   function handleAddToCart(e: React.MouseEvent) {
     e.preventDefault()
+    e.stopPropagation()
+    addItem({
+      id: product.id,
+      name,
+      slug: product.id,
+      price: product.price,
+      image: product.image,
+      stock: 99,
+    })
     setAdded(true)
     setTimeout(() => setAdded(false), 2000)
+  }
+
+  function handleToggleWish(e: React.MouseEvent) {
+    e.preventDefault()
+    e.stopPropagation()
+    toggleWish({
+      id: product.id,
+      name,
+      slug: product.id,
+      price: product.price,
+      comparePrice: product.originalPrice ?? null,
+      image: product.image,
+    })
   }
 
   return (
@@ -59,7 +91,7 @@ export function HomepageProductCard({ product }: HomepageProductCardProps) {
 
         {/* Wishlist */}
         <button
-          onClick={(e) => { e.preventDefault(); e.stopPropagation(); setWished((w) => !w) }}
+          onClick={handleToggleWish}
           aria-label={t('add_to_wishlist')}
           className="absolute top-3 end-3 w-8 h-8 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-sm transition-all duration-200 hover:scale-110 z-10"
         >

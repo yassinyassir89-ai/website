@@ -194,5 +194,71 @@
     "back_to_brands": "العودة إلى الماركات",
     "all_products": "جميع منتجات الماركة",
     "no_products": "لا توجد منتجات لهذه الماركة"
+  },
+  "cart": {
+    "title": "سلتي",
+    "subtitle": "تحققي من منتجاتك قبل الطلب",
+    "empty_title": "سلتك فارغة",
+    "empty_subtitle": "اكتشفي منتجاتنا وأضيفي مفضلاتك",
+    "continue_shopping": "متابعة التسوق",
+    "item": "منتج",
+    "items": "منتجات",
+    "quantity": "الكمية",
+    "remove": "إزالة",
+    "subtotal": "المجموع الفرعي",
+    "shipping": "التوصيل",
+    "shipping_free": "مجاني",
+    "shipping_cost": "30 د.م",
+    "free_shipping_message": "تبقى {amount} د.م للتوصيل المجاني",
+    "total": "المجموع الكلي",
+    "checkout": "إتمام الطلب",
+    "clear_cart": "إفراغ السلة"
+  },
+  "wishlist": {
+    "title": "مفضلاتي",
+    "subtitle": "المنتجات التي تحبينها",
+    "empty_title": "لا توجد مفضلات حالياً",
+    "empty_subtitle": "اضغطي على القلب على المنتجات التي تحبينها لحفظها",
+    "explore_shop": "استكشاف المتجر",
+    "items_count": "{count} منتج محفوظ",
+    "clear_all": "مسح الكل"
+  },
+  "checkout": {
+    "title": "إتمام الطلب",
+    "subtitle": "معلوماتك للتوصيل",
+    "contact_info": "معلومات الاتصال",
+    "full_name": "الاسم الكامل",
+    "full_name_placeholder": "مثال: سارة العمراني",
+    "phone": "رقم الهاتف",
+    "phone_placeholder": "+212 6 00 00 00 00",
+    "city": "المدينة",
+    "city_placeholder": "مثال: الدار البيضاء، الرباط، مراكش",
+    "address": "العنوان (اختياري)",
+    "address_placeholder": "الشارع، الرقم، الحي...",
+    "notes": "ملاحظة لعامل التوصيل (اختياري)",
+    "notes_placeholder": "وقت التوصيل المفضل، تعليمات...",
+    "payment_method": "طريقة الدفع",
+    "cod_title": "الدفع عند الاستلام",
+    "cod_description": "ادفعي نقداً عند استلام طلبك",
+    "order_summary": "ملخص الطلب",
+    "place_order": "تأكيد الطلب",
+    "processing": "جارٍ المعالجة...",
+    "errors": {
+      "name_required": "الرجاء إدخال اسمك",
+      "phone_required": "الرجاء إدخال رقم هاتفك",
+      "phone_invalid": "صيغة الهاتف غير صحيحة",
+      "city_required": "الرجاء إدخال مدينتك"
+    }
+  },
+  "confirmation": {
+    "title": "تم تأكيد طلبك!",
+    "subtitle": "شكراً لثقتك بنا",
+    "order_number": "رقم الطلب",
+    "details": "ستتلقين قريباً اتصالاً من فريقنا لتأكيد طلبك وتنظيم التوصيل.",
+    "delivery_time": "مدة التوصيل المقدرة: 2 إلى 4 أيام عمل",
+    "payment_method_label": "طريقة الدفع",
+    "cod_label": "الدفع عند الاستلام",
+    "continue_shopping": "متابعة التسوق",
+    "back_to_home": "العودة إلى الرئيسية"
   }
 }

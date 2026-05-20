@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages, getTranslations } from 'next-intl/server'
 import { Playfair_Display, Poppins, Tajawal, Almarai } from 'next/font/google'
+import { StoreHydration } from '@/components/store-hydration'
 import './globals.css'
 
 const playfair = Playfair_Display({
@@ -62,6 +63,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     >
       <body className="font-sans antialiased bg-cream text-ink" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages} locale={locale} timeZone="Africa/Casablanca">
+          <StoreHydration />
           {children}
         </NextIntlClientProvider>
       </body>
