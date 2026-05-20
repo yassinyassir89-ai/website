@@ -15,6 +15,18 @@ export interface MockProduct {
   badge?: BilingualText
   isNew?: boolean
   isBestSeller?: boolean
+  brandId?: string
+}
+
+export interface MockBrand {
+  id: string
+  name: string
+  tagline: BilingualText
+  description: BilingualText
+  logo: string
+  cover: string
+  origin: BilingualText
+  productCount: number
 }
 
 export interface MockCategory {
@@ -209,3 +221,81 @@ export const mockProducts: MockProduct[] = [
 
 export const featuredProducts = mockProducts.slice(0, 8)
 export const bestSellerProducts = mockProducts.filter((p) => p.isBestSeller)
+export const promoProducts = mockProducts.filter((p) => p.originalPrice && p.originalPrice > p.price)
+
+export const mockBrands: MockBrand[] = [
+  {
+    id: 'glow-naturals',
+    name: 'Glow Naturals',
+    tagline: { fr: 'La beauté naturelle révélée', ar: 'الجمال الطبيعي المُكتشف' },
+    description: {
+      fr: 'Marque française premium spécialisée dans les soins naturels et bio. Formules certifiées sans paraben ni sulfate, conçues pour révéler l\'éclat naturel de chaque peau.',
+      ar: 'علامة فرنسية فاخرة متخصصة في العناية الطبيعية والعضوية. تركيبات معتمدة خالية من البارابين والكبريتات، مصممة لإبراز الإشراق الطبيعي لكل بشرة.',
+    },
+    logo: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=200&auto=format&fit=crop&q=80',
+    cover: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1200&auto=format&fit=crop&q=85',
+    origin: { fr: 'France', ar: 'فرنسا' },
+    productCount: 4,
+  },
+  {
+    id: 'rose-orient',
+    name: 'Rose d\'Orient',
+    tagline: { fr: 'L\'élégance marocaine', ar: 'الأناقة المغربية' },
+    description: {
+      fr: 'Marque marocaine d\'exception qui marie tradition et innovation. Inspirée par les rituels de beauté du Maghreb avec des ingrédients précieux : argan, rose de Damas, ghassoul.',
+      ar: 'علامة مغربية استثنائية تجمع بين التقاليد والابتكار. مستوحاة من طقوس الجمال المغاربية بمكونات ثمينة: الأركان، الورد الدمشقي، الغاسول.',
+    },
+    logo: 'https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=200&auto=format&fit=crop&q=80',
+    cover: 'https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=1200&auto=format&fit=crop&q=85',
+    origin: { fr: 'Maroc', ar: 'المغرب' },
+    productCount: 3,
+  },
+  {
+    id: 'k-bloom',
+    name: 'K-Bloom',
+    tagline: { fr: 'L\'innovation coréenne', ar: 'الابتكار الكوري' },
+    description: {
+      fr: 'Pionnière de la K-Beauty haut de gamme. Technologies avancées et ingrédients fermentés pour une peau visiblement plus jeune et lumineuse en seulement quelques semaines.',
+      ar: 'رائدة في الجمال الكوري الفاخر. تقنيات متطورة ومكونات مخمرة لبشرة أصغر سناً وأكثر إشراقاً خلال أسابيع قليلة.',
+    },
+    logo: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=200&auto=format&fit=crop&q=80',
+    cover: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1200&auto=format&fit=crop&q=85',
+    origin: { fr: 'Corée du Sud', ar: 'كوريا الجنوبية' },
+    productCount: 2,
+  },
+  {
+    id: 'pure-essence',
+    name: 'Pure Essence',
+    tagline: { fr: 'Soins essentiels purs', ar: 'العناية الأساسية النقية' },
+    description: {
+      fr: 'Soins du quotidien accessibles, formulés avec rigueur scientifique. Tous les ingrédients sont traçables et la marque s\'engage pour une beauté responsable et durable.',
+      ar: 'منتجات عناية يومية متاحة، مُصنّعة بدقة علمية. جميع المكونات قابلة للتتبع، والعلامة ملتزمة بجمال مسؤول ومستدام.',
+    },
+    logo: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=200&auto=format&fit=crop&q=80',
+    cover: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=1200&auto=format&fit=crop&q=85',
+    origin: { fr: 'Suisse', ar: 'سويسرا' },
+    productCount: 2,
+  },
+  {
+    id: 'soleil-doree',
+    name: 'Soleil Dorée',
+    tagline: { fr: 'Protection & lumière', ar: 'الحماية والإشراق' },
+    description: {
+      fr: 'Spécialiste de la protection solaire haut de gamme. Filtres nouvelle génération qui protègent sans laisser de film blanc, pour une peau saine sous le soleil.',
+      ar: 'متخصصة في الحماية الشمسية الفاخرة. فلاتر الجيل الجديد تحمي دون ترك طبقة بيضاء، لبشرة صحية تحت الشمس.',
+    },
+    logo: 'https://images.unsplash.com/photo-1526758097130-bab247274f58?w=200&auto=format&fit=crop&q=80',
+    cover: 'https://images.unsplash.com/photo-1526758097130-bab247274f58?w=1200&auto=format&fit=crop&q=85',
+    origin: { fr: 'Espagne', ar: 'إسبانيا' },
+    productCount: 1,
+  },
+]
+
+// Assign products to brands (cycling through brands by index)
+mockProducts.forEach((p, i) => {
+  if (i < 4) p.brandId = 'glow-naturals'
+  else if (i < 7) p.brandId = 'rose-orient'
+  else if (i < 9) p.brandId = 'k-bloom'
+  else if (i < 11) p.brandId = 'pure-essence'
+  else p.brandId = 'soleil-doree'
+})

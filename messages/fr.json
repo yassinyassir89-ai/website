@@ -168,5 +168,31 @@
     "added_to_cart": "Ajouté au panier",
     "view_cart": "Voir le panier",
     "continue_shopping": "Continuer mes achats"
+  },
+  "promotions": {
+    "title": "Promotions",
+    "subtitle": "Offres exceptionnelles à durée limitée",
+    "badge": "Offre Spéciale",
+    "save": "Économisez",
+    "discount": "de réduction",
+    "ends_soon": "Offre limitée",
+    "no_promos": "Aucune promotion disponible pour le moment",
+    "biggest_savings": "Plus grandes économies",
+    "shop_all_promos": "Tout voir",
+    "up_to": "Jusqu'à",
+    "off": "DE RÉDUCTION",
+    "hero_title": "Soldes exclusives",
+    "hero_subtitle": "Profitez de nos meilleures offres sur une sélection de produits beauté de luxe"
+  },
+  "brands": {
+    "title": "Nos Marques",
+    "subtitle": "Une sélection des plus grandes marques de beauté",
+    "discover": "Découvrir",
+    "products": "produits",
+    "origin": "Origine",
+    "view_products": "Voir les produits",
+    "back_to_brands": "Retour aux marques",
+    "all_products": "Tous les produits de la marque",
+    "no_products": "Aucun produit pour cette marque"
   }
 }
