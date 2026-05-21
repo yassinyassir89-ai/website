@@ -7,6 +7,7 @@ export interface MockProduct {
   id: string
   name: BilingualText
   category: BilingualText
+  description?: BilingualText
   price: number
   originalPrice?: number
   rating: number
@@ -562,6 +563,24 @@ export const mockProducts: MockProduct[] = [
     reviews: 0,
     image: 'https://www.cerave.ma/-/media/project/loreal/brand-sites/cerave/americas/ma/scx/ma-common-images/ma-pdp-packshots/baume-hydratant/baume-hydratant-454-g-lg.jpg?rev=-1?w=500&hash=BCCF3915C2E9E3FBCA89323483C0294B',
     isBestSeller: true,
+  },
+  {
+    id: '44',
+    name: {
+      fr: 'Cerave Gel Moussant Nettoyant Peau Normale à Grasse',
+      ar: 'سيرافي جل رغوي منظف للبشرة العادية إلى الدهنية',
+    },
+    category: { fr: 'Soin du visage', ar: 'العناية بالبشرة' },
+    description: {
+      fr: "Développé avec des dermatologues, le Gel Moussant CeraVe foaming cleanser nettoie en douceur, purifie en profondeur sans altérer la barrière naturelle de la peau. Ce gel purifiant, aux 3 céramides essentiels et à l'acide hyaluronique, élimine efficacement l'excès de sebum, les impuretés et le maquillage.",
+      ar: 'تم تطويره بالتعاون مع أطباء الجلد. جل سيرافي الرغوي ينظف بلطف ويطهر بعمق دون الإخلال بحاجز البشرة الطبيعي. هذا الجل المنقي، المحتوي على 3 سيراميدات أساسية وحمض الهيالورونيك، يزيل بفعالية الدهون الزائدة والشوائب والمكياج.',
+    },
+    price: 90,
+    rating: 4.7,
+    reviews: 0,
+    image: 'https://www.cerave.ma/-/media/project/loreal/brand-sites/cerave/americas/ma/scx/ma-common-images/ma-pdp-packshots/gel-moussant/gel-moussant-473-ml-lg.jpg?rev=-1?w=500&hash=A44572F4188AFB9A02026161135079E0',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
   },
 ]
 

@@ -225,10 +225,12 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
 
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-soft min-h-[200px]">
             {activeTab === 'description' && (
-              <p className="text-ink/70 leading-relaxed">
-                {locale === 'ar'
-                  ? `${name} - منتج فاخر مصنوع من أجود المكونات الطبيعية. تركيبة مدروسة بعناية لمنحك بشرة مشرقة وصحية. مناسب لجميع أنواع البشرة، خاصة الحساسة. خالٍ من البارابين والكبريتات. منتج مصرح به من قبل الجمعيات الصحية المغربية.`
-                  : `${name} - un produit de luxe formulé avec les ingrédients naturels les plus précieux. Une formule étudiée avec soin pour vous offrir une peau radieuse et saine. Convient à tous les types de peau, particulièrement aux peaux sensibles. Sans parabène ni sulfate. Produit certifié par les associations sanitaires marocaines.`}
+              <p className="text-ink/70 leading-relaxed whitespace-pre-line">
+                {product.description
+                  ? (locale === 'ar' ? product.description.ar : product.description.fr)
+                  : locale === 'ar'
+                    ? `${name} - منتج فاخر مصنوع من أجود المكونات الطبيعية. تركيبة مدروسة بعناية لمنحك بشرة مشرقة وصحية. مناسب لجميع أنواع البشرة، خاصة الحساسة. خالٍ من البارابين والكبريتات. منتج مصرح به من قبل الجمعيات الصحية المغربية.`
+                    : `${name} - un produit de luxe formulé avec les ingrédients naturels les plus précieux. Une formule étudiée avec soin pour vous offrir une peau radieuse et saine. Convient à tous les types de peau, particulièrement aux peaux sensibles. Sans parabène ni sulfate. Produit certifié par les associations sanitaires marocaines.`}
               </p>
             )}
             {activeTab === 'details' && (
