@@ -17,6 +17,7 @@ const nextConfig = {
       { protocol: 'https', hostname: 'www.cerave.com' },
       { protocol: 'https', hostname: 'www.cerave.fr' },
       { protocol: 'https', hostname: 'haytamparfumerie.com' },
+      { protocol: 'https', hostname: 'beautyforyou.ma' },
       { protocol: 'https', hostname: '**.shopifycdn.com' },
       { protocol: 'https', hostname: 'cdn.shopify.com' },
       { protocol: 'https', hostname: '**.googleusercontent.com' },

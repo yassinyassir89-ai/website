@@ -636,6 +636,60 @@ export const mockProducts: MockProduct[] = [
     badge: { fr: 'Nouveau', ar: 'جديد' },
     isNew: true,
   },
+  {
+    id: '48',
+    name: {
+      fr: 'La Roche-Posay Toleriane Sensitive 40ml',
+      ar: 'لا روش بوزيه توليريان سينسيتيف 40 مل',
+    },
+    category: { fr: 'Soin du visage', ar: 'العناية بالبشرة' },
+    description: {
+      fr: "Profitez d'une peau équilibrée et apaisée avec La Roche-Posay Toleriane Sensitive. Cette formule douce et sans parfum offre une hydratation intense tout en réduisant les rougeurs et les irritations cutanées. Adaptée aux peaux sensibles, elle nourrit en profondeur et laisse votre peau protégée et confortable.",
+      ar: 'استمتعي ببشرة متوازنة ومهدّأة مع لا روش بوزيه توليريان سينسيتيف. هذه التركيبة اللطيفة الخالية من العطور توفّر ترطيباً مكثفاً مع تقليل الاحمرار وتهيجات البشرة. مناسبة للبشرات الحساسة، تغذّي بعمق وتترك بشرتك محمية ومريحة.',
+    },
+    price: 135,
+    rating: 4.8,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/la-roche-posay-toleriane-sensitive-creme-hydratante-apaisante-peau-sensible40ml-1-68a90e7545135.jpg?v=1755909790&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '49',
+    name: {
+      fr: 'La Roche-Posay Toleriane Sensitive Riche 40ml',
+      ar: 'لا روش بوزيه توليريان سينسيتيف ريش 40 مل',
+    },
+    category: { fr: 'Soin du visage', ar: 'العناية بالبشرة' },
+    description: {
+      fr: "La nouvelle hydratation dermatologique, si sûre qu'elle convient aux bébés.\n\nPour les peaux sensibles à tendance sèche à très sèche. Rougeurs occasionnelles, tiraillements, picotements, sécheresse. Convient aux bébés.\n\nTOLERIANE SENSITIVE :\n• Hydrate pendant 48 heures. Protège la barrière cutanée au quotidien.\n• Apaise et réduit les irritations cutanées. Diminue les sensations de tiraillements, de picotements, de sécheresse et les rougeurs occasionnelles.",
+      ar: 'الترطيب الجلدي الجديد، آمن لدرجة أنه مناسب للأطفال الرضع.\n\nللبشرات الحساسة الميّالة للجفاف إلى الجفاف الشديد. احمرار عرضي، شد، وخز، جفاف. مناسب للأطفال الرضع.\n\nتوليريان سينسيتيف:\n• يرطب لمدة 48 ساعة. يحمي حاجز البشرة يومياً.\n• يهدّئ ويقلل تهيجات البشرة. يقلل من إحساس الشد والوخز والجفاف والاحمرار العرضي.',
+    },
+    price: 140,
+    rating: 4.8,
+    reviews: 0,
+    image: 'https://beautyforyou.ma/cdn/shop/files/product-2012199.jpg?v=1772094559&width=500',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '50',
+    name: {
+      fr: 'La Roche-Posay Effaclar Gel Moussant Purifiant',
+      ar: 'لا روش بوزيه إيفاكلار جل رغوي منقّي',
+    },
+    category: { fr: 'Soin du visage', ar: 'العناية بالبشرة' },
+    description: {
+      fr: "Ce gel moussant élimine impuretés et excès de sébum tout en purifiant la peau grasse à tendance acnéique. Formulé pour être anti-points noirs, il laisse la peau propre et fraîche. Contient des ingrédients spécialement choisis pour éliminer l'acné et la graisse, pour une peau plus saine.",
+      ar: 'هذا الجل الرغوي يزيل الشوائب والدهون الزائدة مع تنقية البشرة الدهنية المعرضة لحب الشباب. مصمم ليكون مضاداً للرؤوس السوداء، يترك البشرة نظيفة ومنعشة. يحتوي على مكونات مختارة خصيصاً للقضاء على حب الشباب والدهون، لبشرة أكثر صحة.',
+    },
+    price: 195,
+    rating: 4.7,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/la-roche-posay-productpage-acne-effaclar-cleansing-foaming-gel-400ml-3337872411991-zoom-front-n.webp?v=1707850841&width=493',
+    badge: { fr: 'Bestseller', ar: 'الأكثر مبيعاً' },
+    isBestSeller: true,
+  },
 ]
 
 export const featuredProducts = mockProducts.slice(0, 8)
@@ -721,12 +775,27 @@ export const mockBrands: MockBrand[] = [
     origin: { fr: 'États-Unis', ar: 'الولايات المتحدة' },
     productCount: 3,
   },
+  {
+    id: 'la-roche-posay',
+    name: 'La Roche-Posay',
+    tagline: { fr: 'Recommandée par les dermatologues', ar: 'موصى بها من قبل أطباء الجلد' },
+    description: {
+      fr: "La Roche-Posay est une marque pharmaceutique française de référence, recommandée par 90 000 dermatologues dans le monde. Ses formules à base d'eau thermale de La Roche-Posay, riche en sélénium antioxydant, sont conçues pour les peaux sensibles, intolérantes et à problèmes. Chaque produit est testé sous strict contrôle dermatologique.",
+      ar: 'لا روش بوزيه علامة صيدلية فرنسية رائدة، موصى بها من قبل 90 ألف طبيب جلد حول العالم. تركيباتها المعتمدة على ماء لا روش بوزيه الحراري الغني بالسيلينيوم المضاد للأكسدة مصممة للبشرات الحساسة والمتطلبة والمشكلة. كل منتج مختبر تحت إشراف دقيق من أطباء الجلد.',
+    },
+    logo: 'https://haytamparfumerie.com/cdn/shop/files/la-roche-posay-toleriane-sensitive-creme-hydratante-apaisante-peau-sensible40ml-1-68a90e7545135.jpg?v=1755909790&width=200',
+    cover: 'https://haytamparfumerie.com/cdn/shop/files/la-roche-posay-productpage-acne-effaclar-cleansing-foaming-gel-400ml-3337872411991-zoom-front-n.webp?v=1707850841&width=1200',
+    origin: { fr: 'France', ar: 'فرنسا' },
+    productCount: 3,
+  },
 ]
 
 // Assign products to brands — smart category-based rules
 mockProducts.forEach((p, i) => {
   // CeraVe-branded products → CeraVe brand
   if (/\bcerave\b/i.test(p.name.fr)) p.brandId = 'cerave'
+  // La Roche-Posay products → La Roche-Posay brand (catches "La Roche-Posay", "La Roche Posay", "La roche posay")
+  else if (/roche[\s-]?posay/i.test(p.name.fr)) p.brandId = 'la-roche-posay'
   // K-Beauty products always go to K-Bloom brand
   else if (p.category.fr === 'K-Beauty') p.brandId = 'k-bloom'
   // Sunscreen products always go to Soleil Dorée
