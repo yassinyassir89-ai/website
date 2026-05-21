@@ -582,6 +582,24 @@ export const mockProducts: MockProduct[] = [
     badge: { fr: 'Nouveau', ar: 'جديد' },
     isNew: true,
   },
+  {
+    id: '45',
+    name: {
+      fr: 'CeraVe Lait Hydratant - Moisturizing Lotion',
+      ar: 'سيرافي لوشن مرطب - Moisturizing Lotion',
+    },
+    category: { fr: 'Soin du visage', ar: 'العناية بالبشرة' },
+    description: {
+      fr: "Developpé avec des dermatologues, le lait hydratant CeraVe hydrate efficacement tout en aidant à restaurer la barrière protectrice de la peau. Sa texture légère et non grasse, enrichie aux 3 céramides essentiels et à l'acide hyaluronique, offre une hydratation tout au long de la journée et dès la première application.",
+      ar: 'تم تطويره بالتعاون مع أطباء الجلد. لوشن سيرافي المرطب يرطب البشرة بفعالية مع المساعدة على استعادة حاجزها الواقي. قوامه الخفيف غير الدهني، الغني بـ 3 سيراميدات أساسية وحمض الهيالورونيك، يوفر ترطيباً طوال اليوم منذ التطبيق الأول.',
+    },
+    price: 110,
+    rating: 4.7,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/products/cerave-lait-hydratant-cerave-236ml.jpg?v=1724506547&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
 ]
 
 export const featuredProducts = mockProducts.slice(0, 8)
@@ -654,17 +672,36 @@ export const mockBrands: MockBrand[] = [
     origin: { fr: 'Espagne', ar: 'إسبانيا' },
     productCount: 7,
   },
+  {
+    id: 'cerave',
+    name: 'CeraVe',
+    tagline: { fr: 'Développé avec des dermatologues', ar: 'مُطوّر بالتعاون مع أطباء الجلد' },
+    description: {
+      fr: 'CeraVe est une marque américaine de référence, développée avec des dermatologues. Sa gamme de soins quotidiens à base des 3 céramides essentiels et acide hyaluronique restaure la barrière protectrice de la peau. Convient à tous les types de peau, même les plus sensibles. Sans parfum, non comédogène.',
+      ar: 'سيرافي علامة أمريكية رائدة، تم تطويرها بالتعاون مع أطباء الجلد. مجموعة العناية اليومية المعتمدة على 3 سيراميدات أساسية وحمض الهيالورونيك تعيد بناء حاجز البشرة الواقي. مناسبة لجميع أنواع البشرة بما فيها الأكثر حساسية. خالية من العطور وغير مسببة لانسداد المسام.',
+    },
+    logo: 'https://www.cerave.ma/-/media/project/loreal/brand-sites/cerave/americas/ma/scx/ma-common-images/ma-pdp-packshots/baume-hydratant/baume-hydratant-454-g-lg.jpg?rev=-1?w=200&hash=BCCF3915C2E9E3FBCA89323483C0294B',
+    cover: 'https://www.cerave.ma/-/media/project/loreal/brand-sites/cerave/americas/ma/scx/ma-common-images/ma-pdp-packshots/gel-moussant/gel-moussant-473-ml-lg.jpg?rev=-1?w=1200&hash=A44572F4188AFB9A02026161135079E0',
+    origin: { fr: 'États-Unis', ar: 'الولايات المتحدة' },
+    productCount: 3,
+  },
 ]
 
-// Assign products to brands — cycle to balance distribution across all 42 products
-const brandIds = ['glow-naturals', 'rose-orient', 'k-bloom', 'pure-essence', 'soleil-doree']
+// Assign products to brands — smart category-based rules
 mockProducts.forEach((p, i) => {
+  // CeraVe-branded products → CeraVe brand
+  if (/\bcerave\b/i.test(p.name.fr)) p.brandId = 'cerave'
   // K-Beauty products always go to K-Bloom brand
-  if (p.category.fr === 'K-Beauty') p.brandId = 'k-bloom'
+  else if (p.category.fr === 'K-Beauty') p.brandId = 'k-bloom'
   // Sunscreen products always go to Soleil Dorée
   else if (p.category.fr === 'Protection solaire') p.brandId = 'soleil-doree'
   // Moroccan products (perfumes, argan-based) go to Rose d'Orient
   else if (p.category.fr === 'Parfums' || p.name.fr.includes('Argan') || p.name.fr.includes('Rose')) p.brandId = 'rose-orient'
   // Rest cycle between Glow Naturals and Pure Essence
   else p.brandId = i % 2 === 0 ? 'glow-naturals' : 'pure-essence'
+})
+
+// Auto-update productCount on each brand so the cards always show the truth
+mockBrands.forEach((brand) => {
+  brand.productCount = mockProducts.filter((p) => p.brandId === brand.id).length
 })
