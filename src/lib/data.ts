@@ -553,6 +553,16 @@ export const mockProducts: MockProduct[] = [
     badge: { fr: 'Nouveau', ar: 'جديد' },
     isNew: true,
   },
+  {
+    id: '43',
+    name: { fr: 'Cerave Baume Hydratant - moisturizing cream', ar: 'بلسم سيرافي المرطب - كريم مرطب' },
+    category: { fr: 'Soin du visage', ar: 'العناية بالبشرة' },
+    price: 124,
+    rating: 4.7,
+    reviews: 0,
+    image: 'https://instagram.ftng3-2.fna.fbcdn.net/v/t1.15752-9/674809002_1584509733103045_341876179311198925_n.png?_nc_cat=111&ccb=7-5&_nc_sid=0024fc&_nc_ohc=WmI4DC7iR_wQ7kNvwFDOX43&_nc_oc=AdphX_vaZpyGFKwJ0bhRHvwaFCq1Ot5m0EOIS2yQZe_zRdagBtB-QgMOmF3Ylo01o2A&_nc_zt=23&_nc_ht=instagram.ftng3-2.fna&_nc_ss=7a6a8&oh=03_Q7cD5QHlgKEJpf4eyWXWvJJPnxG4-HQ-WlMXUw3h4ifidgUIEw&oe=6A369E2D',
+    isBestSeller: true,
+  },
 ]
 
 export const featuredProducts = mockProducts.slice(0, 8)
