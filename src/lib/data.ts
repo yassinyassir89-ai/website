@@ -600,6 +600,42 @@ export const mockProducts: MockProduct[] = [
     badge: { fr: 'Nouveau', ar: 'جديد' },
     isNew: true,
   },
+  {
+    id: '46',
+    name: {
+      fr: 'CeraVe Baume Hydratant 177ml',
+      ar: 'سيرافي بلسم مرطب 177 مل',
+    },
+    category: { fr: 'Soin du visage', ar: 'العناية بالبشرة' },
+    description: {
+      fr: "Développé avec des dermatologues, le Baume Hydratant CeraVe aide à restaurer la barrière protectrice de la peau. Ce soin nourrissant, enrichi aux 3 céramides essentiels et à l'acide hyaluronique hydrate la peau en continu pendant 48h, dès la première application. Son efficacité est prouvée : -80% de sécheresse cutanée.",
+      ar: 'تم تطويره بالتعاون مع أطباء الجلد. بلسم سيرافي المرطب يساعد على استعادة الحاجز الواقي للبشرة. هذا المنتج المغذي، الغني بـ 3 سيراميدات أساسية وحمض الهيالورونيك، يرطب البشرة باستمرار لمدة 48 ساعة منذ التطبيق الأول. فعاليته مُثبتة: -80% من جفاف البشرة.',
+    },
+    price: 90,
+    rating: 4.7,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/cerave-baume-hydratant-177ml_76fd3c36-3025-4ba0-805a-35fb64aa6834.jpg?v=1693935554&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '47',
+    name: {
+      fr: 'CeraVe Huile Lavante Moussante Hydratante - Hydrating Foaming Oil Cleanser 437ml',
+      ar: 'سيرافي زيت غسول رغوي مرطب - Hydrating Foaming Oil Cleanser 437 مل',
+    },
+    category: { fr: 'Soin du visage', ar: 'العناية بالبشرة' },
+    description: {
+      fr: "Avec le CeraVe Huile Lavante Moussante Hydratante, votre peau sera nettoyée et hydratée en un seul geste. Cette formule unique combine une huile nourrissante avec une mousse légère pour éliminer efficacement les impuretés tout en laissant une sensation de douceur et d'hydratation. Profitez de 437 ml de pureté et de bien-être pour votre peau.",
+      ar: 'مع زيت سيرافي الغسول الرغوي المرطب، ستُنظف بشرتك وتُرطب بحركة واحدة. هذه التركيبة الفريدة تجمع بين زيت مغذٍ ورغوة خفيفة لإزالة الشوائب بفعالية مع ترك إحساس بالنعومة والترطيب. استمتعي بـ 437 مل من النقاء والعافية لبشرتك.',
+    },
+    price: 150,
+    rating: 4.7,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/IMG-1648.jpg?v=1714651332&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
 ]
 
 export const featuredProducts = mockProducts.slice(0, 8)
