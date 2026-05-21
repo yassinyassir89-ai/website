@@ -17,8 +17,11 @@ export async function PUT(req: Request, { params }: { params: { id: string } }) 
       where: { id: params.id },
       data: serializeProduct({
         name: data.name,
+        nameAr: data.nameAr || null,
         description: data.description,
+        descriptionAr: data.descriptionAr || null,
         shortDesc: data.shortDesc,
+        shortDescAr: data.shortDescAr || null,
         price: data.price,
         comparePrice: data.comparePrice || null,
         stock: data.stock,
@@ -28,7 +31,7 @@ export async function PUT(req: Request, { params }: { params: { id: string } }) 
         featured: data.featured || false,
         isNew: data.isNew || false,
         isBestSeller: data.isBestSeller || false,
-      }),
+      }) as any,
     })
     return NextResponse.json(parseProduct(product))
   } catch {

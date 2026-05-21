@@ -37,9 +37,12 @@ export async function POST(req: Request) {
     const product = await prisma.product.create({
       data: serializeProduct({
         name: data.name,
+        nameAr: data.nameAr || null,
         slug,
         description: data.description,
+        descriptionAr: data.descriptionAr || null,
         shortDesc: data.shortDesc,
+        shortDescAr: data.shortDescAr || null,
         price: data.price,
         comparePrice: data.comparePrice || null,
         stock: data.stock,
@@ -49,7 +52,7 @@ export async function POST(req: Request) {
         featured: data.featured || false,
         isNew: data.isNew || false,
         isBestSeller: data.isBestSeller || false,
-      }),
+      }) as any,
     })
 
     return NextResponse.json(parseProduct(product), { status: 201 })

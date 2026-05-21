@@ -1,9 +1,9 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Plus, Search, Edit, Trash2, Eye, X, Link as LinkIcon, GripVertical } from 'lucide-react'
+import { Plus, Search, Edit, Trash2, Eye, X, Link as LinkIcon, GripVertical, Upload, Loader2 } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { productSchema, type ProductInput } from '@/lib/validations'
@@ -14,6 +14,8 @@ import type { Product, Category } from '@/types'
 function ImageManager({ images, onChange }: { images: string[]; onChange: (imgs: string[]) => void }) {
   const [urlInput, setUrlInput] = useState('')
   const [error, setError] = useState('')
+  const [uploading, setUploading] = useState(false)
+  const fileInputRef = useRef<HTMLInputElement>(null)
 
   const addUrl = () => {
     const url = urlInput.trim()
@@ -31,6 +33,43 @@ function ImageManager({ images, onChange }: { images: string[]; onChange: (imgs:
     setError('')
   }
 
+  const handleFileSelect = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files
+    if (!files || files.length === 0) return
+
+    setUploading(true)
+    setError('')
+    const uploadedUrls: string[] = []
+
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i]
+      if (file.size > 5 * 1024 * 1024) {
+        toast.error(`${file.name}: trop volumineux (max 5MB)`)
+        continue
+      }
+      const formData = new FormData()
+      formData.append('file', file)
+      try {
+        const res = await fetch('/api/upload', { method: 'POST', body: formData })
+        const data = await res.json()
+        if (res.ok && data.url) {
+          uploadedUrls.push(data.url)
+          toast.success(`${file.name} uploadée`)
+        } else {
+          toast.error(data.error || `Échec: ${file.name}`)
+        }
+      } catch (err) {
+        toast.error(`Erreur de connexion: ${file.name}`)
+      }
+    }
+
+    if (uploadedUrls.length > 0) {
+      onChange([...images, ...uploadedUrls])
+    }
+    setUploading(false)
+    if (fileInputRef.current) fileInputRef.current.value = ''
+  }
+
   const remove = (idx: number) => onChange(images.filter((_, i) => i !== idx))
 
   const moveUp = (idx: number) => {
@@ -43,6 +82,44 @@ function ImageManager({ images, onChange }: { images: string[]; onChange: (imgs:
   return (
     <div className="space-y-3">
       <label className="text-xs uppercase text-gray-500 block">Photos du produit</label>
+
+      {/* Upload button */}
+      <div>
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept="image/jpeg,image/png,image/webp,image/avif"
+          multiple
+          onChange={handleFileSelect}
+          className="hidden"
+        />
+        <button
+          type="button"
+          onClick={() => fileInputRef.current?.click()}
+          disabled={uploading}
+          className="w-full border-2 border-dashed border-gray-300 hover:border-gold py-4 flex flex-col items-center justify-center gap-1.5 text-sm text-gray-600 hover:text-gold transition-colors disabled:opacity-60"
+        >
+          {uploading ? (
+            <>
+              <Loader2 size={18} className="animate-spin" />
+              <span>Téléversement en cours...</span>
+            </>
+          ) : (
+            <>
+              <Upload size={18} />
+              <span>Choisir des images depuis votre appareil</span>
+              <span className="text-[10px] text-gray-400">JPG, PNG, WebP · max 5MB · plusieurs à la fois</span>
+            </>
+          )}
+        </button>
+      </div>
+
+      {/* OR separator */}
+      <div className="flex items-center gap-3 text-xs text-gray-400">
+        <div className="flex-1 h-px bg-gray-200" />
+        <span>OU coller un lien</span>
+        <div className="flex-1 h-px bg-gray-200" />
+      </div>
 
       {/* URL input */}
       <div className="flex gap-2">
@@ -155,8 +232,11 @@ export default function AdminProduitsPage() {
     if (product) {
       setEditingProduct(product)
       setValue('name', product.name)
+      setValue('nameAr', (product as any).nameAr || '')
       setValue('description', product.description)
+      setValue('descriptionAr', (product as any).descriptionAr || '')
       setValue('shortDesc', product.shortDesc || '')
+      setValue('shortDescAr', (product as any).shortDescAr || '')
       setValue('price', product.price)
       setValue('comparePrice', product.comparePrice || undefined)
       setValue('stock', product.stock)
@@ -327,9 +407,18 @@ export default function AdminProduitsPage() {
               <form onSubmit={handleSubmit(onSubmit)} className="p-6 space-y-5">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="col-span-2">
-                    <label className="text-xs uppercase text-gray-500 mb-1.5 block">Nom du produit *</label>
+                    <label className="text-xs uppercase text-gray-500 mb-1.5 block">🇫🇷 Nom du produit (français) *</label>
                     <input {...register('name')} className="w-full border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:border-gold" />
                     {errors.name && <p className="text-xs text-red-500 mt-1">{errors.name.message}</p>}
+                  </div>
+                  <div className="col-span-2">
+                    <label className="text-xs uppercase text-gray-500 mb-1.5 block">🇲🇦 اسم المنتج (بالعربية)</label>
+                    <input
+                      {...register('nameAr')}
+                      dir="rtl"
+                      placeholder="مثال: سيروم ترطيب وإشراق"
+                      className="w-full border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:border-gold font-tajawal"
+                    />
                   </div>
                   <div>
                     <label className="text-xs uppercase text-gray-500 mb-1.5 block">Prix (MAD) *</label>
@@ -354,13 +443,31 @@ export default function AdminProduitsPage() {
                     {errors.categoryId && <p className="text-xs text-red-500 mt-1">{errors.categoryId.message}</p>}
                   </div>
                   <div className="col-span-2">
-                    <label className="text-xs uppercase text-gray-500 mb-1.5 block">Description courte</label>
+                    <label className="text-xs uppercase text-gray-500 mb-1.5 block">🇫🇷 Description courte (français)</label>
                     <input {...register('shortDesc')} className="w-full border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:border-gold" />
                   </div>
                   <div className="col-span-2">
-                    <label className="text-xs uppercase text-gray-500 mb-1.5 block">Description complète *</label>
+                    <label className="text-xs uppercase text-gray-500 mb-1.5 block">🇲🇦 وصف قصير (بالعربية)</label>
+                    <input
+                      {...register('shortDescAr')}
+                      dir="rtl"
+                      className="w-full border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:border-gold font-tajawal"
+                    />
+                  </div>
+                  <div className="col-span-2">
+                    <label className="text-xs uppercase text-gray-500 mb-1.5 block">🇫🇷 Description complète (français) *</label>
                     <textarea {...register('description')} rows={4} className="w-full border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:border-gold resize-none" />
                     {errors.description && <p className="text-xs text-red-500 mt-1">{errors.description.message}</p>}
+                  </div>
+                  <div className="col-span-2">
+                    <label className="text-xs uppercase text-gray-500 mb-1.5 block">🇲🇦 الوصف الكامل (بالعربية)</label>
+                    <textarea
+                      {...register('descriptionAr')}
+                      dir="rtl"
+                      rows={4}
+                      placeholder="وصف تفصيلي للمنتج..."
+                      className="w-full border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:border-gold resize-none font-tajawal"
+                    />
                   </div>
 
                   {/* Image Manager */}
