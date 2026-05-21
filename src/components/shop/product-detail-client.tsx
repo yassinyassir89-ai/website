@@ -2,16 +2,19 @@
 
 import { useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
+import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
   Star, Heart, ShoppingBag, Minus, Plus, Truck, Shield,
-  RotateCcw, Share2, ArrowLeft, Check
+  RotateCcw, Share2, ArrowLeft, Check, Zap
 } from 'lucide-react'
 import { HomepageProductCard } from '@/components/home/homepage-product-card'
 import { mockProducts, type MockProduct } from '@/lib/data'
 import { getProductName, getProductCategory, getProductBadge, calculateDiscount } from '@/lib/i18n-helpers'
+import { useCartStore } from '@/store/cartStore'
+import { useWishlistStore } from '@/store/wishlistStore'
 
 interface ProductDetailClientProps {
   product: MockProduct
@@ -21,12 +24,17 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
   const t = useTranslations('product_detail')
   const tProduct = useTranslations('product')
   const locale = useLocale()
+  const router = useRouter()
   const base = `/${locale}`
 
   const [quantity, setQuantity] = useState(1)
-  const [wished, setWished] = useState(false)
   const [added, setAdded] = useState(false)
   const [activeTab, setActiveTab] = useState<'description' | 'details' | 'reviews'>('description')
+
+  const addItem = useCartStore((s) => s.addItem)
+  const toggleWish = useWishlistStore((s) => s.toggleItem)
+  const isWishlisted = useWishlistStore((s) => s.isWishlisted)
+  const wished = isWishlisted(product.id)
 
   const name = getProductName(product, locale)
   const category = getProductCategory(product, locale)
@@ -37,9 +45,35 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
     .filter((p) => p.id !== product.id && (p.category.fr === product.category.fr))
     .slice(0, 4)
 
+  const cartProduct = {
+    id: product.id,
+    name,
+    slug: product.id,
+    price: product.price,
+    image: product.image,
+    stock: 99,
+  }
+
   const handleAddToCart = () => {
+    addItem(cartProduct, quantity)
     setAdded(true)
     setTimeout(() => setAdded(false), 2500)
+  }
+
+  const handleBuyNow = () => {
+    addItem(cartProduct, quantity)
+    router.push(`${base}/paiement`)
+  }
+
+  const handleToggleWish = () => {
+    toggleWish({
+      id: product.id,
+      name,
+      slug: product.id,
+      price: product.price,
+      comparePrice: product.originalPrice ?? null,
+      image: product.image,
+    })
   }
 
   return (
@@ -141,8 +175,9 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
               <span className="font-semibold text-green-700">{t('in_stock')}</span>
             </div>
 
-            {/* Quantity + Add to cart */}
-            <div className="flex flex-wrap items-center gap-3 mt-2">
+            {/* Quantity selector */}
+            <div className="flex items-center gap-3 mt-2">
+              <span className="text-sm text-ink/60 font-medium">{t('quantity')}:</span>
               <div className="flex items-center bg-white border-2 border-primary/20 rounded-full">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
@@ -160,24 +195,38 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
                   <Plus size={14} />
                 </button>
               </div>
+            </div>
 
+            {/* Buy Now — prominent dark button */}
+            <motion.button
+              onClick={handleBuyNow}
+              whileHover={{ scale: 1.01 }}
+              whileTap={{ scale: 0.99 }}
+              className="w-full bg-ink hover:bg-ink/90 text-white py-4 rounded-full font-semibold text-base flex items-center justify-center gap-2.5 shadow-lg transition-colors group"
+            >
+              <Zap size={18} className="text-gold group-hover:scale-110 transition-transform" fill="currentColor" />
+              {t('buy_now')}
+            </motion.button>
+
+            {/* Add to cart + Wishlist */}
+            <div className="flex items-center gap-3">
               <button
                 onClick={handleAddToCart}
-                className="flex-1 min-w-[200px] btn-primary"
+                className="flex-1 bg-white border-2 border-ink text-ink hover:bg-ink hover:text-white py-3.5 rounded-full font-semibold text-sm flex items-center justify-center gap-2 transition-colors"
               >
                 {added ? (
                   <>
-                    <Check size={16} /> {t('added_to_cart')}
+                    <Check size={16} className="text-green-500" /> {t('added_to_cart')}
                   </>
                 ) : (
                   <>
-                    <ShoppingBag size={16} /> {tProduct('add_to_cart')}
+                    <ShoppingBag size={15} /> {tProduct('add_to_cart')}
                   </>
                 )}
               </button>
 
               <button
-                onClick={() => setWished((w) => !w)}
+                onClick={handleToggleWish}
                 className="w-12 h-12 rounded-full border-2 border-primary/20 flex items-center justify-center hover:border-primary hover:bg-primary-light transition-colors"
                 aria-label={tProduct('add_to_wishlist')}
               >
