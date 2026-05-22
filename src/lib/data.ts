@@ -675,8 +675,8 @@ export const mockProducts: MockProduct[] = [
   {
     id: '50',
     name: {
-      fr: 'La Roche-Posay Effaclar Gel Moussant Purifiant',
-      ar: 'لا روش بوزيه إيفاكلار جل رغوي منقّي',
+      fr: 'La Roche-Posay Effaclar Gel Moussant Purifiant 400ml',
+      ar: 'لا روش بوزيه إيفاكلار جل رغوي منقّي 400 مل',
     },
     category: { fr: 'Soin du visage', ar: 'العناية بالبشرة' },
     description: {
@@ -687,6 +687,42 @@ export const mockProducts: MockProduct[] = [
     rating: 4.7,
     reviews: 0,
     image: 'https://haytamparfumerie.com/cdn/shop/files/la-roche-posay-productpage-acne-effaclar-cleansing-foaming-gel-400ml-3337872411991-zoom-front-n.webp?v=1707850841&width=493',
+    badge: { fr: 'Bestseller', ar: 'الأكثر مبيعاً' },
+    isBestSeller: true,
+  },
+  {
+    id: '51',
+    name: {
+      fr: 'La Roche-Posay Effaclar Gel Moussant Purifiant 200ml',
+      ar: 'لا روش بوزيه إيفاكلار جل رغوي منقّي 200 مل',
+    },
+    category: { fr: 'Soin du visage', ar: 'العناية بالبشرة' },
+    description: {
+      fr: "Obtenez une peau propre et rafraîchie avec le Gel Moussant Purifiant Effaclar de La Roche-Posay. Spécialement conçu pour les peaux grasses, ce gel nettoyant purifie en douceur sans assécher la peau grâce à des agents doux. Enrichi en eau thermale et zinc, il élimine les impuretés et atténue la brillance pour une peau parfaitement équilibrée.",
+      ar: 'احصلي على بشرة نظيفة ومنتعشة مع جل إيفاكلار الرغوي المنقّي من لا روش بوزيه. مصمم خصيصاً للبشرات الدهنية، هذا الجل المنظف ينقّي بلطف دون تجفيف البشرة بفضل مكوناته اللطيفة. غني بالماء الحراري والزنك، يزيل الشوائب ويقلل اللمعان لبشرة متوازنة تماماً.',
+    },
+    price: 140,
+    rating: 4.7,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/IMG-8348.jpg?v=1707894118&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '52',
+    name: {
+      fr: 'La Roche-Posay Effaclar Duo+ Soin Anti-Imperfections 40ml',
+      ar: 'لا روش بوزيه إيفاكلار ديو+ عناية مضادة للعيوب 40 مل',
+    },
+    category: { fr: 'Soin du visage', ar: 'العناية بالبشرة' },
+    description: {
+      fr: "EFFACLAR Duo+ prévient l'apparition des imperfections, élimine les boutons et régule la production de sébum.\n\n• Besoin : Réduire les imperfections | Peaux Grasses à tendance acnéique.\n• Ingrédients Clés : LHA et Acide Salicylique pour exfolier sans irriter | Zinc PCA pour réduire le sébum | Mannose pour régénérer la peau | Procerad et Niacinamide pour atténuer les taches.\n• Sécurité : Hypoallergénique | Non-Comédogène | Sans Parabène.\n• Utilisation : Appliquer le matin et/ou le soir sur une peau nettoyée. Visage.",
+      ar: 'إيفاكلار ديو+ يمنع ظهور العيوب، يقضي على البثور وينظّم إفراز الدهون.\n\n• الاحتياج: تقليل العيوب | البشرات الدهنية المعرضة لحب الشباب.\n• المكونات الرئيسية: حمض LHA والساليسيليك لتقشير لطيف بدون تهيج | زنك PCA لتقليل الدهون | مانوز لتجديد البشرة | بروسيراد ونياسيناميد لتقليل البقع.\n• الأمان: غير مسبب للحساسية | غير مسبب لانسداد المسام | خالٍ من البارابين.\n• الاستخدام: يُطبق صباحاً و/أو مساءً على بشرة نظيفة. الوجه.',
+    },
+    price: 175,
+    rating: 4.8,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/products/image_e12f3840-f383-4345-9b1d-064338348ccf.webp?v=1675884895&width=493',
     badge: { fr: 'Bestseller', ar: 'الأكثر مبيعاً' },
     isBestSeller: true,
   },
