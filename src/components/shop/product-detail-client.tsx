@@ -8,7 +8,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {
   Star, Heart, ShoppingBag, Minus, Plus, Truck, Shield,
-  RotateCcw, Share2, ArrowLeft, Check, Zap
+  RotateCcw, Share2, ArrowLeft, Check, Zap, ImageOff
 } from 'lucide-react'
 import { HomepageProductCard } from '@/components/home/homepage-product-card'
 import { mockProducts, type MockProduct } from '@/lib/data'
@@ -29,6 +29,7 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
 
   const [quantity, setQuantity] = useState(1)
   const [added, setAdded] = useState(false)
+  const [imgError, setImgError] = useState(false)
   const [activeTab, setActiveTab] = useState<'description' | 'details' | 'reviews'>('description')
 
   const addItem = useCartStore((s) => s.addItem)
@@ -112,14 +113,22 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
             transition={{ duration: 0.5 }}
           >
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-primary-light shadow-soft">
-              <Image
-                src={product.image}
-                alt={name}
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
+              {imgError ? (
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-primary/40 gap-3 p-6">
+                  <ImageOff size={64} />
+                  <span className="text-sm text-center text-ink/50">{name}</span>
+                </div>
+              ) : (
+                <Image
+                  src={product.image}
+                  alt={name}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                  onError={() => setImgError(true)}
+                />
+              )}
               {badge && (
                 <div className={`absolute top-5 start-5 px-3 py-1.5 rounded-full text-xs font-bold ${
                   product.isBestSeller ? 'bg-gold text-white' : product.isNew ? 'bg-primary text-white' : 'bg-ink text-white'

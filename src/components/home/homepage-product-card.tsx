@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 import { motion } from 'framer-motion'
-import { Heart, Star, ShoppingBag } from 'lucide-react'
+import { Heart, Star, ShoppingBag, ImageOff } from 'lucide-react'
 import type { MockProduct } from '@/lib/data'
 import { useCartStore } from '@/store/cartStore'
 import { useWishlistStore } from '@/store/wishlistStore'
@@ -19,6 +19,7 @@ export function HomepageProductCard({ product }: HomepageProductCardProps) {
   const locale = useLocale()
   const [added, setAdded] = useState(false)
   const [mounted, setMounted] = useState(false)
+  const [imgError, setImgError] = useState(false)
 
   const addItem = useCartStore((s) => s.addItem)
   const toggleWish = useWishlistStore((s) => s.toggleItem)
@@ -70,13 +71,21 @@ export function HomepageProductCard({ product }: HomepageProductCardProps) {
     >
       {/* Image */}
       <Link href={`/${locale}/produit/${product.id}`} className="relative aspect-product overflow-hidden bg-primary-light rounded-t-2xl block">
-        <Image
-          src={product.image}
-          alt={name}
-          fill
-          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-          className="object-cover transition-transform duration-700 group-hover:scale-110"
-        />
+        {imgError ? (
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-primary/40 gap-2 p-4">
+            <ImageOff size={36} />
+            <span className="text-[10px] text-center text-ink/50 line-clamp-2">{name}</span>
+          </div>
+        ) : (
+          <Image
+            src={product.image}
+            alt={name}
+            fill
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            className="object-cover transition-transform duration-700 group-hover:scale-110"
+            onError={() => setImgError(true)}
+          />
+        )}
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
