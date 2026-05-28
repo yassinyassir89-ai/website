@@ -51,7 +51,9 @@ export function Logo({
           width={dim.width}
           height={dim.height}
           priority
-          className="object-contain transition-opacity duration-300 group-hover:opacity-90"
+          className={`object-contain transition-opacity duration-300 group-hover:opacity-90 ${
+            variant === 'dark' ? 'brightness-110 contrast-110' : ''
+          }`}
           onError={() => setImgError(true)}
         />
       ) : (

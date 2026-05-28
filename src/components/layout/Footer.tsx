@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 import { Instagram, Facebook, Youtube, MapPin, Phone, Mail, ArrowRight } from 'lucide-react'
+import { Logo } from './logo'
 
 export function Footer() {
   const t = useTranslations('footer')
@@ -32,11 +33,8 @@ export function Footer() {
 
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="mb-5">
-              <h3 className="font-serif text-3xl tracking-wide">
-                Grow <span className="text-gold italic">Beauty</span>
-              </h3>
-              <span className="text-[10px] uppercase tracking-[0.4em] text-gold">{t('boutique')}</span>
+            <div className="mb-5 flex justify-start">
+              <Logo size="md" showTagline={false} variant="dark" />
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-6">{t('tagline')}</p>
             <div className="flex items-center gap-3">
