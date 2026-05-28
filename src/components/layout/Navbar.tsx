@@ -8,6 +8,7 @@ import { Search, ShoppingBag, Heart, Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { AnnouncementBar } from './announcement-bar'
 import { LanguageSwitcher } from './language-switcher'
+import { Logo } from './logo'
 import { useCartStore } from '@/store/cartStore'
 import { useWishlistStore } from '@/store/wishlistStore'
 
@@ -61,15 +62,8 @@ export function Navbar() {
             </button>
 
             {/* Logo */}
-            <Link href={base} className="flex flex-col items-center group">
-              <span className="font-serif text-2xl md:text-3xl text-ink group-hover:text-primary transition-colors duration-300 tracking-wide">
-                Grow{' '}
-                <span className="text-gold italic">Beauty</span>
-              </span>
-              <span className="text-[9px] uppercase tracking-[0.5em] text-gold font-medium -mt-0.5">
-                {t('tagline')}
-              </span>
-            </Link>
+            <Logo size="md" showTagline />
+
 
             {/* Desktop nav */}
             <nav className="hidden lg:flex items-center gap-8">
@@ -190,9 +184,7 @@ export function Navbar() {
               )}
             >
               <div className="flex items-center justify-between p-6 border-b border-primary/10">
-                <span className="font-serif text-xl text-ink">
-                  Grow <span className="text-gold italic">Beauty</span>
-                </span>
+                <Logo size="sm" showTagline={false} />
                 <button onClick={() => setIsMobileOpen(false)} aria-label="Close">
                   <X size={22} className="text-ink" />
                 </button>
