@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none">
+  <!-- Brand gradient background -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F48FB1"/>
+      <stop offset="60%" stop-color="#FCE4EC"/>
+      <stop offset="100%" stop-color="#D4B483"/>
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" rx="38" ry="38" fill="url(#bg)"/>
+
+  <!-- GB monogram large -->
+  <g transform="translate(90, 92)">
+    <text text-anchor="middle" fill="#ffffff" font-family="'Playfair Display', 'Georgia', serif" font-size="90" font-weight="500" dominant-baseline="middle" letter-spacing="-3">
+      GB
+    </text>
+  </g>
+
+  <!-- Decorative leaf on bottom -->
+  <g transform="translate(90, 135)">
+    <ellipse cx="0" cy="0" rx="22" ry="5" fill="#ffffff" opacity="0.75"/>
+    <line x1="-22" y1="0" x2="22" y2="0" stroke="#D4B483" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- BEAUTY & CARE tagline -->
+  <text x="90" y="158" text-anchor="middle" fill="#ffffff" font-family="'Poppins', Arial, sans-serif" font-size="10" font-weight="500" letter-spacing="3" opacity="0.85">
+    BEAUTY &amp; CARE
+  </text>
+</svg>

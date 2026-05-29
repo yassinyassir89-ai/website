@@ -43,7 +43,7 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3001'),
     title: { default: t('title'), template: `%s | Grow Beauty` },
     description: t('description'),
-    icons: { icon: '/favicon.ico' },
+    // icons are auto-detected from src/app/icon.svg + src/app/apple-icon.svg
   }
 }
 
