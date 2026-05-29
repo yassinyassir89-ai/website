@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" fill="none">
+  <!-- Beige/gold color: matches the user's logo -->
+  <defs>
+    <style>
+      .gold { fill: #C8A97E; }
+      .gold-stroke { stroke: #C8A97E; stroke-width: 2; fill: none; }
+      .gold-thin { stroke: #C8A97E; stroke-width: 1; fill: none; }
+      .serif { font-family: 'Playfair Display', 'Georgia', serif; }
+      .sans { font-family: 'Poppins', 'Arial', sans-serif; }
+    </style>
+  </defs>
+
+  <!-- GB Monogram with leaf -->
+  <g transform="translate(200, 70)">
+    <!-- G letter (left, curved) -->
+    <text x="-32" y="0" class="serif gold" font-size="80" font-weight="400" text-anchor="middle" dominant-baseline="middle">G</text>
+    <!-- B letter (right, overlapping) -->
+    <text x="18" y="0" class="serif gold" font-size="80" font-weight="400" text-anchor="middle" dominant-baseline="middle">B</text>
+    <!-- Leaf element underneath -->
+    <g transform="translate(0, 20)">
+      <path d="M -30 0 Q -10 -8, 0 -3 Q 10 -8, 30 0 Q 10 5, 0 3 Q -10 5, -30 0 Z" class="gold" opacity="0.9"/>
+      <path d="M 0 -3 L 0 3" class="gold-thin"/>
+    </g>
+  </g>
+
+  <!-- "Grow Beauty" wordmark -->
+  <text x="200" y="180" class="serif gold" font-size="56" font-weight="400" text-anchor="middle" letter-spacing="0">
+    Grow Beauty
+  </text>
+
+  <!-- Decorative lines + "BEAUTY & CARE" -->
+  <g transform="translate(200, 220)">
+    <line x1="-110" y1="0" x2="-55" y2="0" class="gold-thin"/>
+    <text x="0" y="4" class="sans gold" font-size="13" font-weight="400" text-anchor="middle" letter-spacing="5">
+      BEAUTY &amp; CARE
+    </text>
+    <line x1="55" y1="0" x2="110" y2="0" class="gold-thin"/>
+  </g>
+</svg>

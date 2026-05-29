@@ -32,10 +32,13 @@ export function Logo({
 }: LogoProps) {
   const locale = useLocale()
   const t = useTranslations('nav')
-  const [imgError, setImgError] = useState(false)
+  const [pngError, setPngError] = useState(false)
+  const [svgError, setSvgError] = useState(false)
 
   const dim = sizes[size]
   const linkHref = href ?? `/${locale}`
+  const imgError = pngError && svgError
+  const currentSrc = !pngError ? '/logo.png' : '/logo.svg'
 
   // Color tokens differ by variant
   const textColor = variant === 'dark' ? 'text-white' : 'text-ink'
@@ -46,15 +49,19 @@ export function Logo({
     <Link href={linkHref} className={`flex flex-col items-center group ${className}`} aria-label="Grow Beauty">
       {!imgError ? (
         <Image
-          src="/logo.png"
+          src={currentSrc}
           alt="Grow Beauty"
           width={dim.width}
           height={dim.height}
           priority
+          unoptimized={currentSrc.endsWith('.svg')}
           className={`object-contain transition-opacity duration-300 group-hover:opacity-90 ${
             variant === 'dark' ? 'brightness-110 contrast-110' : ''
           }`}
-          onError={() => setImgError(true)}
+          onError={() => {
+            if (!pngError) setPngError(true)
+            else setSvgError(true)
+          }}
         />
       ) : (
         <>
