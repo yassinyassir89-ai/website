@@ -709,22 +709,20 @@ export const mockProducts: MockProduct[] = [
     isNew: true,
   },
   {
-    id: '52',
-    name: {
-      fr: 'La Roche-Posay Effaclar Duo+ Soin Anti-Imperfections 40ml',
-      ar: 'لا روش بوزيه إيفاكلار ديو+ عناية مضادة للعيوب 40 مل',
-    },
-    category: { fr: 'Soin du visage', ar: 'العناية بالبشرة' },
+    id: "52",
+    name: { fr: "La Roche-Posay Effaclar Duo+ Soin Anti-Imperfections 40ml", ar: "لا روش بوزيه إيفاكلار ديو+ عناية مضادة للعيوب 40 مل" },
+    category: { fr: "Soin du visage", ar: "العناية بالبشرة" },
     description: {
       fr: "EFFACLAR Duo+ prévient l'apparition des imperfections, élimine les boutons et régule la production de sébum.\n\n• Besoin : Réduire les imperfections | Peaux Grasses à tendance acnéique.\n• Ingrédients Clés : LHA et Acide Salicylique pour exfolier sans irriter | Zinc PCA pour réduire le sébum | Mannose pour régénérer la peau | Procerad et Niacinamide pour atténuer les taches.\n• Sécurité : Hypoallergénique | Non-Comédogène | Sans Parabène.\n• Utilisation : Appliquer le matin et/ou le soir sur une peau nettoyée. Visage.",
-      ar: 'إيفاكلار ديو+ يمنع ظهور العيوب، يقضي على البثور وينظّم إفراز الدهون.\n\n• الاحتياج: تقليل العيوب | البشرات الدهنية المعرضة لحب الشباب.\n• المكونات الرئيسية: حمض LHA والساليسيليك لتقشير لطيف بدون تهيج | زنك PCA لتقليل الدهون | مانوز لتجديد البشرة | بروسيراد ونياسيناميد لتقليل البقع.\n• الأمان: غير مسبب للحساسية | غير مسبب لانسداد المسام | خالٍ من البارابين.\n• الاستخدام: يُطبق صباحاً و/أو مساءً على بشرة نظيفة. الوجه.',
+      ar: "إيفاكلار ديو+ يمنع ظهور العيوب، يقضي على البثور وينظّم إفراز الدهون.\n\n• الاحتياج: تقليل العيوب | البشرات الدهنية المعرضة لحب الشباب.\n• المكونات الرئيسية: حمض LHA والساليسيليك لتقشير لطيف بدون تهيج | زنك PCA لتقليل الدهون | مانوز لتجديد البشرة | بروسيراد ونياسيناميد لتقليل البقع.\n• الأمان: غير مسبب للحساسية | غير مسبب لانسداد المسام | خالٍ من البارابين.\n• الاستخدام: يُطبق صباحاً و/أو مساءً على بشرة نظيفة. الوجه.",
     },
     price: 175,
     rating: 4.8,
     reviews: 0,
-    image: 'https://haytamparfumerie.com/cdn/shop/products/image_e12f3840-f383-4345-9b1d-064338348ccf.webp?v=1675884895&width=493',
-    badge: { fr: 'Bestseller', ar: 'الأكثر مبيعاً' },
+    image: "https://www.zinabel.ma/13745-large_default/effaclar-duom-la-roche-posay.jpg",
+    badge: { fr: "Bestseller", ar: "الأكثر مبيعاً" },
     isBestSeller: true,
+    brandId: "la-roche-posay",
   },
 ]
 
