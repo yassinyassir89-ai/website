@@ -252,8 +252,53 @@
     }
   },
   "builder": {
-    "title": "منشئ المنتجات",
-    "subtitle": "املئي النموذج وانسخي الكود المولّد إلى src/lib/data.ts",
+    "title": "لوحة الإدارة",
+    "subtitle": "أضيفي، عدّلي، أو أديري منتجاتك",
+    "tabs": {
+      "add": "إضافة منتج",
+      "edit": "تعديل موجود",
+      "brand": "ماركة جديدة",
+      "stats": "الإحصائيات"
+    },
+    "edit": {
+      "title": "تعديل منتج موجود",
+      "subtitle": "اضغطي على منتج لتحميله في النموذج",
+      "search": "ابحثي عن منتج...",
+      "no_results": "لا توجد منتجات",
+      "load_into_form": "تحميل",
+      "editing_label": "تعديل المنتج #{id}",
+      "save_changes": "توليد كود التحديث",
+      "instructions_edit": "1. اضغطي 'نسخ الكود'\n2. افتحي src/lib/data.ts\n3. ابحثي عن الكائن بـ id: '{id}'\n4. استبدلي كامل الكائن بالكود الجديد\n5. احفظي، commit وارفعي"
+    },
+    "brand": {
+      "title": "إنشاء ماركة جديدة",
+      "subtitle": "أضيفي ماركة إلى متجرك",
+      "brand_id": "المعرّف (slug)",
+      "brand_id_hint": "مثال: nivea, bioderma — أحرف صغيرة بدون مسافات",
+      "brand_name": "اسم الماركة",
+      "tagline_fr": "الشعار (فرنسي)",
+      "tagline_ar": "الشعار (عربي)",
+      "description_fr": "الوصف (فرنسي)",
+      "description_ar": "الوصف (عربي)",
+      "origin_fr": "المنشأ (فرنسي)",
+      "origin_ar": "المنشأ (عربي)",
+      "logo_url": "رابط الشعار",
+      "cover_url": "رابط صورة الغلاف",
+      "instructions_brand": "1. اضغطي 'نسخ الكود'\n2. افتحي src/lib/data.ts\n3. ابحثي عن مصفوفة mockBrands\n4. الصقي الكود قبل ] التي تغلق mockBrands\n5. احفظي وارفعي"
+    },
+    "stats": {
+      "title": "نظرة عامة على المتجر",
+      "total_products": "إجمالي المنتجات",
+      "total_brands": "الماركات",
+      "total_categories": "الفئات",
+      "avg_price": "السعر المتوسط",
+      "on_promo": "بخصم",
+      "bestsellers": "الأكثر مبيعاً",
+      "new_products": "الجديدة",
+      "by_category": "حسب الفئة",
+      "by_brand": "حسب الماركة",
+      "price_distribution": "توزيع الأسعار"
+    },
     "form": {
       "basic_info": "المعلومات الأساسية",
       "id_label": "معرّف المنتج",

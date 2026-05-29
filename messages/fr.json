@@ -252,8 +252,53 @@
     }
   },
   "builder": {
-    "title": "Créateur de produits",
-    "subtitle": "Remplissez le formulaire et copiez le code généré dans src/lib/data.ts",
+    "title": "Panneau d'administration",
+    "subtitle": "Ajoutez, modifiez ou gérez votre catalogue",
+    "tabs": {
+      "add": "Ajouter produit",
+      "edit": "Modifier existant",
+      "brand": "Nouvelle marque",
+      "stats": "Statistiques"
+    },
+    "edit": {
+      "title": "Modifier un produit existant",
+      "subtitle": "Cliquez sur un produit pour le charger dans le formulaire",
+      "search": "Rechercher un produit...",
+      "no_results": "Aucun produit trouvé",
+      "load_into_form": "Charger",
+      "editing_label": "Modification du produit #{id}",
+      "save_changes": "Générer le code de mise à jour",
+      "instructions_edit": "1. Cliquez sur 'Copier le code'\n2. Ouvrez src/lib/data.ts\n3. Trouvez l'objet avec id: '{id}'\n4. Remplacez TOUT l'objet par le nouveau code\n5. Sauvegardez, commit et push"
+    },
+    "brand": {
+      "title": "Créer une nouvelle marque",
+      "subtitle": "Ajoutez une marque à votre catalogue",
+      "brand_id": "Identifiant (slug)",
+      "brand_id_hint": "Ex: nivea, bioderma — en minuscules, sans espaces",
+      "brand_name": "Nom de la marque",
+      "tagline_fr": "Slogan (Français)",
+      "tagline_ar": "Slogan (Arabe)",
+      "description_fr": "Description (Français)",
+      "description_ar": "Description (Arabe)",
+      "origin_fr": "Origine (Français)",
+      "origin_ar": "Origine (Arabe)",
+      "logo_url": "URL du logo",
+      "cover_url": "URL de l'image de couverture",
+      "instructions_brand": "1. Cliquez sur 'Copier le code'\n2. Ouvrez src/lib/data.ts\n3. Trouvez le tableau mockBrands\n4. Collez le code juste avant le ] qui ferme mockBrands\n5. Sauvegardez et committez"
+    },
+    "stats": {
+      "title": "Vue d'ensemble du catalogue",
+      "total_products": "Total produits",
+      "total_brands": "Marques",
+      "total_categories": "Catégories",
+      "avg_price": "Prix moyen",
+      "on_promo": "En promotion",
+      "bestsellers": "Bestsellers",
+      "new_products": "Nouveautés",
+      "by_category": "Par catégorie",
+      "by_brand": "Par marque",
+      "price_distribution": "Distribution des prix"
+    },
     "form": {
       "basic_info": "Informations de base",
       "id_label": "ID du produit",

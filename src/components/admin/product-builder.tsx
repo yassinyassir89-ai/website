@@ -187,19 +187,11 @@ export function ProductBuilder() {
   const isValid = form.nameFr && form.nameAr && form.image && form.price > 0
 
   return (
-    <div className="luxury-container py-8 md:py-12">
+    <div>
       {/* Header */}
-      <motion.div
-        className="mb-8"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <div className="flex items-center gap-3 mb-2">
-          <Code size={28} className="text-primary" />
-          <h1 className="font-serif text-3xl md:text-4xl text-ink">{tRoot('title')}</h1>
-        </div>
-        <p className="text-ink/60">{tRoot('subtitle')}</p>
-      </motion.div>
+      <div className="mb-4">
+        <h2 className="font-serif text-2xl text-ink">{tRoot('tabs.add')}</h2>
+      </div>
 
       {/* Drafts banner */}
       {drafts.length > 0 && (
