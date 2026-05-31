@@ -724,6 +724,42 @@ export const mockProducts: MockProduct[] = [
     isBestSeller: true,
     brandId: "la-roche-posay",
   },
+  {
+    id: '53',
+    name: {
+      fr: 'Bioderma Hydrabio Perfecteur SPF30 40ml',
+      ar: 'بيوديرما هيدرابيو بيرفكتور SPF30 40 مل',
+    },
+    category: { fr: 'Soin du visage', ar: 'العناية بالبشرة' },
+    description: {
+      fr: "Hydrabio Perfecteur SPF 30\n\nBénéfices :\n• Masque les imperfections et les micro-rides\n• Lisse durablement le grain de peau et illumine instantanément le teint\n• Ralentit le vieillissement cutané et protège des rayons UV\n• Hydrate intensément et durablement\n• Très bonne tolérance\n• Non comédogène\n• Excellente base de maquillage",
+      ar: 'هيدرابيو بيرفكتور SPF 30\n\nالفوائد:\n• يخفي العيوب والتجاعيد الدقيقة\n• يُنعّم ملمس البشرة بشكل دائم ويضيء البشرة فوراً\n• يبطئ شيخوخة البشرة ويحمي من الأشعة فوق البنفسجية\n• يرطب بشكل مكثف وطويل الأمد\n• تحمّل ممتاز\n• غير مسبب لانسداد المسام\n• قاعدة مكياج ممتازة',
+    },
+    price: 185,
+    rating: 4.7,
+    reviews: 0,
+    image: 'https://www.zinabel.ma/14665-large_default/hydrabio-perfecteur-spf30-40-ml.jpg',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '54',
+    name: {
+      fr: 'Bioderma Sébium Mat Control 30ml',
+      ar: 'بيوديرما سيبيوم مات كنترول 30 مل',
+    },
+    category: { fr: 'Soin du visage', ar: 'العناية بالبشرة' },
+    description: {
+      fr: "Sébium Mat Control\n\nPeau mixte à grasse\n\nLe soin qui matifie et lisse, pour une peau durablement transformée.\n\nBénéfices :\n• Matifie\n• Hydrate\n• Lisse\n• Très bonne tolérance — Non comédogène — Bonne base de maquillage",
+      ar: 'سيبيوم مات كنترول\n\nبشرة مختلطة إلى دهنية\n\nالعناية التي تُمات وتنعّم، لبشرة متحوّلة بشكل دائم.\n\nالفوائد:\n• يخفّف لمعان البشرة\n• يرطّب\n• ينعّم\n• تحمّل ممتاز — غير مسبب لانسداد المسام — قاعدة مكياج جيدة',
+    },
+    price: 145,
+    rating: 4.7,
+    reviews: 0,
+    image: 'https://www.zinabel.ma/14689-large_default/sebium-mat-control-30-ml.jpg',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
 ]
 
 export const featuredProducts = mockProducts.slice(0, 8)
@@ -822,6 +858,19 @@ export const mockBrands: MockBrand[] = [
     origin: { fr: 'France', ar: 'فرنسا' },
     productCount: 3,
   },
+  {
+    id: 'bioderma',
+    name: 'Bioderma',
+    tagline: { fr: 'La biologie au service de la dermatologie', ar: 'علم الأحياء في خدمة طب الجلد' },
+    description: {
+      fr: "Bioderma est une marque dermatologique française pionnière, fondée à Lyon en 1977. Première à appliquer la biologie cutanée à la formulation, elle développe des soins ciblés inspirés des mécanismes naturels de la peau. Ses gammes Sensibio, Hydrabio, Sébium, Atoderm et Photoderm sont reconnues mondialement par les dermatologues pour leur efficacité et leur tolérance exceptionnelle.",
+      ar: 'بيوديرما علامة فرنسية رائدة في طب الجلد، تأسست في ليون عام 1977. أول من طبّق علم الأحياء الجلدي في تركيب المنتجات، تطوّر منتجات عناية مستهدفة مستوحاة من الآليات الطبيعية للبشرة. مجموعاتها سينسيبيو، هيدرابيو، سيبيوم، أتوديرم وفوتوديرم معتمدة عالمياً من قبل أطباء الجلد لفعاليتها وتحمّلها الاستثنائي.',
+    },
+    logo: 'https://www.zinabel.ma/14665-large_default/hydrabio-perfecteur-spf30-40-ml.jpg',
+    cover: 'https://www.zinabel.ma/14665-large_default/hydrabio-perfecteur-spf30-40-ml.jpg',
+    origin: { fr: 'France', ar: 'فرنسا' },
+    productCount: 1,
+  },
 ]
 
 // Assign products to brands — smart category-based rules
@@ -830,6 +879,8 @@ mockProducts.forEach((p, i) => {
   if (/\bcerave\b/i.test(p.name.fr)) p.brandId = 'cerave'
   // La Roche-Posay products → La Roche-Posay brand (catches "La Roche-Posay", "La Roche Posay", "La roche posay")
   else if (/roche[\s-]?posay/i.test(p.name.fr)) p.brandId = 'la-roche-posay'
+  // Bioderma products → Bioderma brand
+  else if (/\bbioderma\b/i.test(p.name.fr)) p.brandId = 'bioderma'
   // K-Beauty products always go to K-Bloom brand
   else if (p.category.fr === 'K-Beauty') p.brandId = 'k-bloom'
   // Sunscreen products always go to Soleil Dorée
