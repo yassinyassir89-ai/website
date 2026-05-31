@@ -743,22 +743,20 @@ export const mockProducts: MockProduct[] = [
     isNew: true,
   },
   {
-    id: '54',
-    name: {
-      fr: 'Bioderma Sébium Mat Control 30ml',
-      ar: 'بيوديرما سيبيوم مات كنترول 30 مل',
-    },
-    category: { fr: 'Soin du visage', ar: 'العناية بالبشرة' },
+    id: "54",
+    name: { fr: "Bioderma Sébium Mat Control 30ml", ar: "بيوديرما سيبيوم مات كنترول 30 مل" },
+    category: { fr: "Soin du visage", ar: "العناية بالبشرة" },
     description: {
       fr: "Sébium Mat Control\n\nPeau mixte à grasse\n\nLe soin qui matifie et lisse, pour une peau durablement transformée.\n\nBénéfices :\n• Matifie\n• Hydrate\n• Lisse\n• Très bonne tolérance — Non comédogène — Bonne base de maquillage",
-      ar: 'سيبيوم مات كنترول\n\nبشرة مختلطة إلى دهنية\n\nالعناية التي تُمات وتنعّم، لبشرة متحوّلة بشكل دائم.\n\nالفوائد:\n• يخفّف لمعان البشرة\n• يرطّب\n• ينعّم\n• تحمّل ممتاز — غير مسبب لانسداد المسام — قاعدة مكياج جيدة',
+      ar: "سيبيوم مات كنترول\n\nبشرة مختلطة إلى دهنية\n\nالعناية التي تُمات وتنعّم، لبشرة متحوّلة بشكل دائم.\n\nالفوائد:\n• يخفّف لمعان البشرة\n• يرطّب\n• ينعّم\n• تحمّل ممتاز — غير مسبب لانسداد المسام — قاعدة مكياج جيدة",
     },
     price: 145,
     rating: 4.7,
     reviews: 0,
-    image: 'https://www.zinabel.ma/14689-large_default/sebium-mat-control-30-ml.jpg',
-    badge: { fr: 'Nouveau', ar: 'جديد' },
+    image: "https://www.zinabel.ma/14689-large_default/sebium-mat-control-30-ml.jpg",
+    badge: { fr: "Nouveau", ar: "جديد" },
     isNew: true,
+    brandId: "bioderma",
   },
 ]
 
