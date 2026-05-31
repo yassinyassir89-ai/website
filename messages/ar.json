@@ -251,19 +251,6 @@
       "city_required": "الرجاء إدخال مدينتك"
     }
   },
-  "admin_auth": {
-    "login_title": "دخول المشرف",
-    "login_subtitle": "يرجى تسجيل الدخول للوصول إلى لوحة الإدارة",
-    "password_label": "كلمة السر",
-    "password_placeholder": "أدخلي كلمة السر",
-    "login_button": "تسجيل الدخول",
-    "logging_in": "جاري الدخول...",
-    "error_invalid": "كلمة السر غير صحيحة",
-    "error_network": "خطأ في الاتصال، حاولي مرة أخرى",
-    "back_home": "العودة للرئيسية",
-    "secure_session": "جلسة آمنة · 7 أيام",
-    "logout": "تسجيل الخروج"
-  },
   "builder": {
     "title": "لوحة الإدارة",
     "subtitle": "أضيفي، عدّلي، أو أديري منتجاتك",

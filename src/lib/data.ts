@@ -865,7 +865,7 @@ export const mockBrands: MockBrand[] = [
       ar: 'بيوديرما علامة فرنسية رائدة في طب الجلد، تأسست في ليون عام 1977. أول من طبّق علم الأحياء الجلدي في تركيب المنتجات، تطوّر منتجات عناية مستهدفة مستوحاة من الآليات الطبيعية للبشرة. مجموعاتها سينسيبيو، هيدرابيو، سيبيوم، أتوديرم وفوتوديرم معتمدة عالمياً من قبل أطباء الجلد لفعاليتها وتحمّلها الاستثنائي.',
     },
     logo: 'https://www.zinabel.ma/14665-large_default/hydrabio-perfecteur-spf30-40-ml.jpg',
-    cover: 'https://www.zinabel.ma/14689-large_default/sebium-mat-control-30-ml.jpg',
+    cover: 'https://www.zinabel.ma/14665-large_default/hydrabio-perfecteur-spf30-40-ml.jpg',
     origin: { fr: 'France', ar: 'فرنسا' },
     productCount: 1,
   },
