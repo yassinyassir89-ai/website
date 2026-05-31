@@ -47,6 +47,14 @@ const nextConfig = {
     },
   },
 
+  async redirects() {
+    return [
+      // Anciens liens arabes → équivalent français (SEO continuity)
+      { source: '/ar', destination: '/fr', permanent: true },
+      { source: '/ar/:path*', destination: '/fr/:path*', permanent: true },
+    ]
+  },
+
   async headers() {
     return [
       // Cache long pour assets statiques (JS, CSS, polices)

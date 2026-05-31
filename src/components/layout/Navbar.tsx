@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Search, ShoppingBag, Heart, Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { AnnouncementBar } from './announcement-bar'
-import { LanguageSwitcher } from './language-switcher'
 import { Logo } from './logo'
 import { useCartStore } from '@/store/cartStore'
 import { useWishlistStore } from '@/store/wishlistStore'
@@ -88,8 +87,6 @@ export function Navbar() {
               >
                 <Search size={20} />
               </button>
-
-              <LanguageSwitcher />
 
               <Link
                 href={`${base}/favoris`}
@@ -202,10 +199,6 @@ export function Navbar() {
                   </Link>
                 ))}
               </nav>
-
-              <div className="p-6 border-t border-primary/10">
-                <LanguageSwitcher />
-              </div>
             </motion.div>
           </>
         )}

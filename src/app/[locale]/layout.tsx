@@ -13,7 +13,7 @@ export default function LocaleLayout({
   children: React.ReactNode
   params: { locale: string }
 }) {
-  if (!locales.includes(locale as 'fr' | 'ar')) {
+  if (!locales.includes(locale as 'fr')) {
     notFound()
   }
 
