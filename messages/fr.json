@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Grow Beauty — Beauté de Luxe",
-    "description": "Découvrez Grow Beauty, votre destination pour des produits de beauté de luxe au Maroc. Soins, maquillage, K-Beauty et coffrets cadeaux."
+    "description": "Découvrez Grow Beauty, votre destination pour des produits de beauté de luxe au Maroc. Soins du visage, soins capillaires, protection solaire et coffrets cadeaux des plus grandes marques (CeraVe, La Roche-Posay, Bioderma)."
   },
   "announcement": {
     "messages": [
       "✨ Livraison gratuite à partir de 500 DH ✨",
-      "🌸 Nouveau : Collection K-Beauty disponible",
+      "🌸 Nouveau : CeraVe, La Roche-Posay & Bioderma disponibles",
       "💛 Paiement à la livraison disponible partout au Maroc"
     ]
   },
@@ -36,9 +36,7 @@
     "subtitle": "Une sélection raffinée pour chaque besoin",
     "items": {
       "soin_visage": "Soin du visage",
-      "maquillage": "Maquillage",
       "cheveux": "Cheveux",
-      "k_beauty": "K-Beauty",
       "solaire": "Protection solaire",
       "coffrets": "Coffrets cadeaux"
     }
@@ -87,7 +85,7 @@
     "subtitle": "Rejoignez notre communauté sur Instagram"
   },
   "footer": {
-    "tagline": "Votre destination de beauté luxueuse au Maroc. Soins d'exception, maquillage sublime, K-Beauty et parfums envoûtants.",
+    "tagline": "Votre destination de beauté luxueuse au Maroc. Soins d'exception, marques pharmaceutiques de référence et coffrets cadeaux raffinés.",
     "boutique": "Boutique",
     "help": "Aide",
     "contact": "Contact",

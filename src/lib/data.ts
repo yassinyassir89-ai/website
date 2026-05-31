@@ -653,19 +653,6 @@ export const mockBrands: MockBrand[] = [
     productCount: 9,
   },
   {
-    id: 'k-bloom',
-    name: 'K-Bloom',
-    tagline: { fr: 'L\'innovation coréenne', ar: 'الابتكار الكوري' },
-    description: {
-      fr: 'Pionnière de la K-Beauty haut de gamme. Technologies avancées et ingrédients fermentés pour une peau visiblement plus jeune et lumineuse en seulement quelques semaines.',
-      ar: 'رائدة في الجمال الكوري الفاخر. تقنيات متطورة ومكونات مخمرة لبشرة أصغر سناً وأكثر إشراقاً خلال أسابيع قليلة.',
-    },
-    logo: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=200&auto=format&fit=crop&q=80',
-    cover: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1200&auto=format&fit=crop&q=85',
-    origin: { fr: 'Corée du Sud', ar: 'كوريا الجنوبية' },
-    productCount: 8,
-  },
-  {
     id: 'pure-essence',
     name: 'Pure Essence',
     tagline: { fr: 'Soins essentiels purs', ar: 'العناية الأساسية النقية' },
