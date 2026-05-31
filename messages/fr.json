@@ -251,6 +251,19 @@
       "city_required": "Veuillez entrer votre ville"
     }
   },
+  "admin_auth": {
+    "login_title": "Accès administrateur",
+    "login_subtitle": "Veuillez vous authentifier pour accéder au panneau d'administration",
+    "password_label": "Mot de passe",
+    "password_placeholder": "Saisissez votre mot de passe",
+    "login_button": "Se connecter",
+    "logging_in": "Connexion en cours...",
+    "error_invalid": "Mot de passe incorrect",
+    "error_network": "Erreur de connexion, réessayez",
+    "back_home": "Retour à l'accueil",
+    "secure_session": "Session sécurisée · 7 jours",
+    "logout": "Déconnexion"
+  },
   "builder": {
     "title": "Panneau d'administration",
     "subtitle": "Ajoutez, modifiez ou gérez votre catalogue",
