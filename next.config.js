@@ -6,7 +6,17 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts')
 const nextConfig = {
   compress: true,
   poweredByHeader: false,
+  productionBrowserSourceMaps: false,
+  reactStrictMode: true,
+
   images: {
+    // ===== OPTIMISATION HOSTINGER =====
+    // Désactive l'optimisation côté serveur. Toutes les images sont servies
+    // directement par leurs CDN d'origine (Unsplash, Shopify, cerave.ma, etc).
+    // Réduit drastiquement l'usage CPU et RAM sur Hostinger.
+    unoptimized: true,
+
+    // Patterns conservés au cas où on réactiverait l'optimisation plus tard.
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com' },
       { protocol: 'https', hostname: 'plus.unsplash.com' },
@@ -29,16 +39,31 @@ const nextConfig = {
       { protocol: 'https', hostname: 'pexels.com' },
       { protocol: 'https', hostname: 'images.pexels.com' },
     ],
-    formats: ['image/avif', 'image/webp'],
-    minimumCacheTTL: 60 * 60 * 24 * 7,
   },
+
   experimental: {
     serverActions: {
-      allowedOrigins: ['localhost:3000'],
+      allowedOrigins: ['localhost:3000', 'localhost:3001', 'growbeauty.online'],
     },
   },
+
   async headers() {
     return [
+      // Cache long pour assets statiques (JS, CSS, polices)
+      {
+        source: '/_next/static/(.*)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      // Cache long pour images dans /public
+      {
+        source: '/(.*)\\.(jpg|jpeg|png|webp|avif|svg|ico|woff2)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      // Headers de sécurité pour tout le reste
       {
         source: '/(.*)',
         headers: [
