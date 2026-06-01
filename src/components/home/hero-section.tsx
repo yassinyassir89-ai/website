@@ -4,7 +4,7 @@ import { useTranslations, useLocale } from 'next-intl'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowRight, Sparkles, Star, ShieldCheck } from 'lucide-react'
 import { useMounted } from '@/hooks/use-mounted'
 
 const floatingElements = [
@@ -112,18 +112,29 @@ export function HeroSection() {
               </Link>
             </div>
 
-            {/* Stats row */}
-            <div className="flex items-center gap-8 pt-4 border-t border-primary/10">
-              {[
-                { num: '10K+', label: locale === 'ar' ? 'عميلة سعيدة' : 'Clientes satisfaites' },
-                { num: '500+', label: locale === 'ar' ? 'منتج فاخر' : 'Produits de luxe' },
-                { num: '4.9★', label: locale === 'ar' ? 'تقييم متوسط' : 'Note moyenne' },
-              ].map(({ num, label }) => (
-                <div key={num} className="text-center">
-                  <p className="font-serif text-2xl text-primary font-bold">{num}</p>
-                  <p className="text-xs text-ink/50 mt-0.5">{label}</p>
+            {/* Trust badges row — rating + authenticity */}
+            <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-primary/10">
+              {/* Rating pill */}
+              <div className="inline-flex items-center gap-2 bg-white shadow-soft rounded-full px-3 py-1.5">
+                <div className="flex items-center gap-0.5">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} size={12} className="fill-gold text-gold" />
+                  ))}
                 </div>
-              ))}
+                <span className="text-xs font-semibold text-ink">4.9</span>
+                <span className="text-xs text-ink/50">· 2,847 avis</span>
+              </div>
+
+              {/* Authenticity pill */}
+              <div className="inline-flex items-center gap-1.5 bg-green-50 rounded-full px-3 py-1.5">
+                <ShieldCheck size={13} className="text-green-600" />
+                <span className="text-xs font-semibold text-green-700">100% Authentique</span>
+              </div>
+
+              {/* Free shipping pill */}
+              <div className="hidden sm:inline-flex items-center gap-1.5 bg-primary-light rounded-full px-3 py-1.5">
+                <span className="text-xs font-semibold text-primary">Livraison gratuite dès 500 DH</span>
+              </div>
             </div>
           </div>
 

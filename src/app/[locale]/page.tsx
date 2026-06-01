@@ -3,6 +3,9 @@ import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { WhatsAppButton } from '@/components/layout/whatsapp-button'
 import { HeroSection } from '@/components/home/hero-section'
+import { SocialProofBar } from '@/components/home/social-proof-bar'
+import { TrustStrip } from '@/components/home/trust-strip'
+import { FeaturedBrandsStrip } from '@/components/home/featured-brands-strip'
 import { CategoriesSection } from '@/components/home/CategoriesSection'
 import { FeaturedProducts } from '@/components/home/featured-products'
 import { PromoBanner } from '@/components/home/PromoBanner'
@@ -21,6 +24,9 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       <Navbar />
       <main>
         <HeroSection />
+        <SocialProofBar />
+        <TrustStrip />
+        <FeaturedBrandsStrip />
         <CategoriesSection />
         <FeaturedProducts />
         <PromoBanner />

@@ -4,6 +4,7 @@ import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { WhatsAppButton } from '@/components/layout/whatsapp-button'
 import { ProductDetailClient } from '@/components/shop/product-detail-client'
+import { StickyProductBar } from '@/components/shop/sticky-product-bar'
 import { mockProducts } from '@/lib/data'
 
 interface PageProps {
@@ -19,11 +20,12 @@ export default function ProductDetailPage({ params: { locale, slug } }: PageProp
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-cream">
+      <main className="min-h-screen bg-cream pb-20 lg:pb-0">
         <ProductDetailClient product={product} />
       </main>
       <Footer />
       <WhatsAppButton />
+      <StickyProductBar product={product} />
     </>
   )
 }
