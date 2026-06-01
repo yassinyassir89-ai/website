@@ -1,76 +1,73 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Truck, Banknote, RotateCcw, ShieldCheck } from 'lucide-react'
-import { useTranslations } from 'next-intl'
+import { Truck, Award, RotateCcw, Lock } from 'lucide-react'
 
 const items = [
   {
-    icon: ShieldCheck,
-    titleFr: '100% Authentique',
-    descFr: 'Produits originaux directement des marques officielles',
-    color: 'text-green-600',
-    bg: 'bg-green-50',
-  },
-  {
     icon: Truck,
-    titleFr: 'Livraison Rapide',
-    descFr: 'Partout au Maroc en 2-4 jours ouvrables',
-    color: 'text-primary',
-    bg: 'bg-primary-light',
+    title: 'LIVRAISON GRATUITE',
+    subtitle: 'Pour toute commande dès 500 DH',
   },
   {
-    icon: Banknote,
-    titleFr: 'Paiement à la Livraison',
-    descFr: 'Payez en espèces lors de la réception',
-    color: 'text-gold-dark',
-    bg: 'bg-gold-light',
+    icon: Award,
+    title: 'QUALITÉ PHARMACEUTIQUE',
+    subtitle: '100% produits authentiques',
   },
   {
     icon: RotateCcw,
-    titleFr: 'Retours Gratuits',
-    descFr: '14 jours pour changer d\'avis sans frais',
-    color: 'text-purple-700',
-    bg: 'bg-purple-50',
+    title: 'RETOURS FACILES',
+    subtitle: 'Sous 14 jours, sans frais',
+  },
+  {
+    icon: Lock,
+    title: 'PAIEMENT SÉCURISÉ',
+    subtitle: 'À la livraison disponible',
   },
 ]
 
 const container = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.08 } },
+  show: { transition: { staggerChildren: 0.06 } },
 }
 
 const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, y: 12 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 }
 
 export function TrustStrip() {
   return (
-    <section className="py-10 md:py-14 bg-gradient-to-b from-cream to-white">
+    <section className="bg-primary-light/40 border-y border-primary/10 py-5 md:py-6">
       <div className="luxury-container">
         <motion.div
           variants={container}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-5"
         >
-          {items.map(({ icon: Icon, titleFr, descFr, color, bg }) => (
+          {items.map(({ icon: Icon, title, subtitle }, idx) => (
             <motion.div
-              key={titleFr}
+              key={title}
               variants={item}
-              className="group bg-white rounded-2xl p-5 md:p-6 shadow-soft hover:shadow-luxury hover:-translate-y-1 transition-all duration-300 flex items-start gap-4"
+              className={`flex items-center gap-3 md:gap-4 ${
+                idx > 0 ? 'lg:border-s lg:border-primary/20 lg:ps-4' : ''
+              }`}
             >
-              <div className={`w-12 h-12 md:w-14 md:h-14 rounded-2xl ${bg} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
-                <Icon size={24} className={color} strokeWidth={1.75} />
+              {/* Circular icon with pink ring (Zack style) */}
+              <div className="relative w-11 h-11 md:w-12 md:h-12 flex-shrink-0">
+                <div className="absolute inset-0 rounded-full border-2 border-primary/30" />
+                <div className="absolute inset-1 rounded-full bg-white flex items-center justify-center">
+                  <Icon size={18} className="text-primary" strokeWidth={1.75} />
+                </div>
               </div>
               <div className="min-w-0">
-                <h3 className="font-semibold text-ink text-sm md:text-base leading-tight mb-1">
-                  {titleFr}
-                </h3>
-                <p className="text-xs md:text-sm text-ink/60 leading-relaxed">
-                  {descFr}
+                <p className="text-[11px] md:text-xs font-bold text-ink tracking-wider leading-tight">
+                  {title}
+                </p>
+                <p className="text-[10px] md:text-xs text-ink/55 leading-tight mt-0.5">
+                  {subtitle}
                 </p>
               </div>
             </motion.div>

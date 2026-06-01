@@ -6,6 +6,7 @@ import { HeroSection } from '@/components/home/hero-section'
 import { SocialProofBar } from '@/components/home/social-proof-bar'
 import { TrustStrip } from '@/components/home/trust-strip'
 import { FeaturedBrandsStrip } from '@/components/home/featured-brands-strip'
+import { BrandValuesStrip } from '@/components/home/brand-values-strip'
 import { CategoriesSection } from '@/components/home/CategoriesSection'
 import { FeaturedProducts } from '@/components/home/featured-products'
 import { PromoBanner } from '@/components/home/PromoBanner'
@@ -33,6 +34,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         <BestSellers />
         <Testimonials />
         <InstagramGallery />
+        <BrandValuesStrip />
         <Newsletter />
       </main>
       <Footer />
