@@ -28,6 +28,12 @@ export interface MockBrand {
   cover: string
   origin: BilingualText
   productCount: number
+  /** Optional spotlight metadata (used by BrandSpotlight section) */
+  spotlight?: {
+    bgClass: string       // Tailwind background utility (e.g. 'bg-[#3d2418]')
+    accentClass: string   // Tailwind text utility for CTA (e.g. 'text-rose-400')
+    headlineFr: string    // Short headline above the brand name
+  }
 }
 
 export interface MockCategory {
@@ -690,6 +696,11 @@ export const mockBrands: MockBrand[] = [
     cover: 'https://www.cerave.ma/-/media/project/loreal/brand-sites/cerave/americas/ma/scx/ma-common-images/ma-pdp-packshots/gel-moussant/gel-moussant-473-ml-lg.jpg?rev=-1?w=1200&hash=A44572F4188AFB9A02026161135079E0',
     origin: { fr: 'États-Unis', ar: 'الولايات المتحدة' },
     productCount: 3,
+    spotlight: {
+      bgClass: 'bg-[#1e3a8a]',
+      accentClass: 'text-sky-300',
+      headlineFr: 'Recommandé par les dermatologues',
+    },
   },
   {
     id: 'la-roche-posay',
@@ -703,6 +714,11 @@ export const mockBrands: MockBrand[] = [
     cover: 'https://haytamparfumerie.com/cdn/shop/files/la-roche-posay-productpage-acne-effaclar-cleansing-foaming-gel-400ml-3337872411991-zoom-front-n.webp?v=1707850841&width=1200',
     origin: { fr: 'France', ar: 'فرنسا' },
     productCount: 3,
+    spotlight: {
+      bgClass: 'bg-[#3d2418]',
+      accentClass: 'text-rose-300',
+      headlineFr: 'L\'exigence dermatologique française',
+    },
   },
   {
     id: 'bioderma',
@@ -713,9 +729,14 @@ export const mockBrands: MockBrand[] = [
       ar: 'بيوديرما علامة فرنسية رائدة في طب الجلد، تأسست في ليون عام 1977. أول من طبّق علم الأحياء الجلدي في تركيب المنتجات، تطوّر منتجات عناية مستهدفة مستوحاة من الآليات الطبيعية للبشرة. مجموعاتها سينسيبيو، هيدرابيو، سيبيوم، أتوديرم وفوتوديرم معتمدة عالمياً من قبل أطباء الجلد لفعاليتها وتحمّلها الاستثنائي.',
     },
     logo: 'https://www.zinabel.ma/14665-large_default/hydrabio-perfecteur-spf30-40-ml.jpg',
-    cover: 'https://www.zinabel.ma/14665-large_default/hydrabio-perfecteur-spf30-40-ml.jpg',
+    cover: 'https://www.zinabel.ma/14689-large_default/sebium-mat-control-30-ml.jpg',
     origin: { fr: 'France', ar: 'فرنسا' },
     productCount: 1,
+    spotlight: {
+      bgClass: 'bg-[#0f4c5c]',
+      accentClass: 'text-amber-300',
+      headlineFr: 'La biologie au service de la peau',
+    },
   },
 ]
 

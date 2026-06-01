@@ -7,6 +7,7 @@ import { SocialProofBar } from '@/components/home/social-proof-bar'
 import { TrustStrip } from '@/components/home/trust-strip'
 import { FeaturedBrandsStrip } from '@/components/home/featured-brands-strip'
 import { BrandValuesStrip } from '@/components/home/brand-values-strip'
+import { BrandSpotlight } from '@/components/home/brand-spotlight'
 import { CategoriesSection } from '@/components/home/CategoriesSection'
 import { FeaturedProducts } from '@/components/home/featured-products'
 import { PromoBanner } from '@/components/home/PromoBanner'
@@ -29,6 +30,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         <TrustStrip />
         <FeaturedBrandsStrip />
         <CategoriesSection />
+        <BrandSpotlight />
         <FeaturedProducts />
         <PromoBanner />
         <BestSellers />
