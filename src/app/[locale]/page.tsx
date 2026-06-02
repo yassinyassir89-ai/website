@@ -8,6 +8,9 @@ import { BrandValuesStrip } from '@/components/home/brand-values-strip'
 import { BrandSpotlight } from '@/components/home/brand-spotlight'
 import { CategoriesSection } from '@/components/home/CategoriesSection'
 import { FeaturedProducts } from '@/components/home/featured-products'
+import { NewArrivalsCarousel } from '@/components/home/new-arrivals-carousel'
+import { PromosCarousel } from '@/components/home/promos-carousel'
+import { GiftsCarousel } from '@/components/home/gifts-carousel'
 import { PromoBanner } from '@/components/home/PromoBanner'
 import { BestSellers } from '@/components/home/BestSellers'
 import { Testimonials } from '@/components/home/Testimonials'
@@ -27,9 +30,12 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         <FeaturedBrandsStrip />
         <CategoriesSection />
         <BrandSpotlight />
+        <NewArrivalsCarousel />
         <FeaturedProducts />
+        <PromosCarousel />
         <PromoBanner />
         <BestSellers />
+        <GiftsCarousel />
         <Testimonials />
         <InstagramGallery />
         <BrandValuesStrip />

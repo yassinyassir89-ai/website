@@ -627,7 +627,7 @@ export const mockProducts: MockProduct[] = [
   },
 ]
 
-export const featuredProducts = mockProducts.slice(0, 8)
+export const featuredProducts = mockProducts.slice(0, 12)
 export const bestSellerProducts = mockProducts.filter((p) => p.isBestSeller)
 export const promoProducts = mockProducts.filter((p) => p.originalPrice && p.originalPrice > p.price)
 
