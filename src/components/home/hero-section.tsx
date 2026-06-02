@@ -4,202 +4,282 @@ import { useTranslations, useLocale } from 'next-intl'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Sparkles, Star, ShieldCheck } from 'lucide-react'
+import { ArrowRight, Sparkles, Users, Package, Star, Truck, Check } from 'lucide-react'
 import { useMounted } from '@/hooks/use-mounted'
+import { mockProducts } from '@/lib/data'
 
-const floatingElements = [
-  { size: 8, x: '15%', y: '20%', delay: 0, duration: 6 },
-  { size: 5, x: '80%', y: '30%', delay: 1, duration: 7 },
-  { size: 12, x: '70%', y: '70%', delay: 0.5, duration: 8 },
-  { size: 6, x: '30%', y: '75%', delay: 1.5, duration: 6.5 },
-  { size: 4, x: '55%', y: '15%', delay: 2, duration: 7.5 },
-]
+// Pick CeraVe products to showcase (matches user's reference image)
+const showcaseProducts = mockProducts.filter((p) => p.brandId === 'cerave').slice(0, 5)
 
 export function HeroSection() {
   const t = useTranslations('hero')
   const locale = useLocale()
   const mounted = useMounted()
-  const isRtl = locale === 'ar'
   const base = `/${locale}`
 
   return (
-    <section className="relative min-h-[90vh] bg-hero-gradient overflow-hidden flex items-center">
-
-      {/* Animated gradient blobs — only animate after mount */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <motion.div
-          className="absolute -top-32 -start-32 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
-          animate={mounted ? { scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] } : undefined}
-          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-        />
-        <motion.div
-          className="absolute top-1/2 -end-32 w-80 h-80 bg-gold/20 rounded-full blur-3xl"
-          animate={mounted ? { scale: [1.2, 1, 1.2], opacity: [0.2, 0.4, 0.2] } : undefined}
-          transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-        />
-        <motion.div
-          className="absolute bottom-0 start-1/3 w-64 h-64 bg-primary-light/50 rounded-full blur-3xl"
-          animate={mounted ? { scale: [1, 1.3, 1], opacity: [0.4, 0.6, 0.4] } : undefined}
-          transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-        />
+    <section className="relative bg-gradient-to-br from-[#1a0a14] via-[#2d0f1c] to-[#1a0a14] overflow-hidden">
+      {/* ===== Background luxury effects ===== */}
+      {/* Central gold radial glow behind the products */}
+      <div className="absolute inset-y-0 end-0 w-full lg:w-3/5 pointer-events-none">
+        <div className="absolute top-1/2 -translate-y-1/2 end-0 w-[700px] h-[700px] max-w-full bg-gradient-radial from-amber-500/25 via-orange-600/10 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-1/2 -translate-y-1/2 end-20 w-[400px] h-[400px] max-w-full bg-gradient-radial from-amber-300/20 to-transparent rounded-full blur-3xl" />
       </div>
 
-      {/* Floating decorative circles */}
-      {mounted && floatingElements.map((el, i) => (
-        <motion.div
-          key={i}
-          className="absolute rounded-full bg-primary/30 pointer-events-none"
-          style={{ width: el.size, height: el.size, left: el.x, top: el.y }}
-          animate={{ y: [0, -20, 0], opacity: [0.3, 0.7, 0.3] }}
-          transition={{ duration: el.duration, delay: el.delay, repeat: Infinity, ease: 'easeInOut' }}
-        />
-      ))}
-
-      {/* Sparkle icons — only show after mount */}
-      {mounted && (
-        <>
+      {/* Golden particles */}
+      {mounted && Array.from({ length: 14 }).map((_, i) => {
+        const x = Math.random() * 100
+        const y = Math.random() * 100
+        const size = Math.random() * 3 + 1
+        const duration = Math.random() * 5 + 6
+        const delay = Math.random() * 3
+        return (
           <motion.div
-            className="absolute top-1/4 end-1/4 text-gold/40 pointer-events-none hidden lg:block"
-            animate={{ rotate: [0, 180, 360], scale: [1, 1.2, 1] }}
-            transition={{ duration: 12, repeat: Infinity, ease: 'linear' }}
-          >
-            <Sparkles size={24} />
-          </motion.div>
+            key={i}
+            className="absolute rounded-full bg-amber-300/40 pointer-events-none"
+            style={{
+              width: size,
+              height: size,
+              left: `${x}%`,
+              top: `${y}%`,
+            }}
+            animate={{
+              y: [0, -25, 0],
+              opacity: [0.2, 0.7, 0.2],
+              scale: [1, 1.3, 1],
+            }}
+            transition={{ duration, delay, repeat: Infinity, ease: 'easeInOut' }}
+          />
+        )
+      })}
+
+      {/* Decorative rings (subtle) */}
+      <div className="absolute top-1/2 end-1/4 -translate-y-1/2 w-[500px] h-[500px] rounded-full border border-amber-500/10 pointer-events-none" />
+      <div className="absolute top-1/2 end-1/3 -translate-y-1/2 w-[700px] h-[700px] rounded-full border border-amber-500/5 pointer-events-none" />
+
+      {/* ===== Content ===== */}
+      <div className="luxury-container relative z-10 py-16 lg:py-24 min-h-[640px] lg:min-h-[720px] flex items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center w-full">
+
+          {/* ===== Left column: Text + CTAs + Stats ===== */}
           <motion.div
-            className="absolute bottom-1/3 start-1/4 text-primary/30 pointer-events-none hidden lg:block"
-            animate={{ rotate: [360, 180, 0], scale: [1.2, 1, 1.2] }}
-            transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
+            className="space-y-6 lg:space-y-7"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
-            <Sparkles size={16} />
-          </motion.div>
-        </>
-      )}
-
-      {/* Main content — two-column split */}
-      <div className="luxury-container relative z-10 w-full py-16 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
-          {/* Text column */}
-          <div className={`space-y-6 ${isRtl ? 'lg:order-2' : 'lg:order-1'}`}>
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-primary-light text-primary px-4 py-2 rounded-full text-xs font-semibold tracking-wide">
+            {/* Badge pill */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-rose-500/20 to-pink-500/20 border border-rose-400/30 text-rose-200 px-4 py-2 rounded-full text-xs font-semibold backdrop-blur-sm"
+            >
               <Sparkles size={12} />
-              {t('badge')}
-            </div>
+              Nouvelle Collection
+            </motion.div>
 
-            {/* Headline */}
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-ink leading-[1.1] text-balance">
-              {t('title')}{' '}
-              <span className="relative inline-block">
-                <span className="text-primary italic">{t('title_accent')}</span>
-                <span className="absolute -bottom-1 start-0 end-0 h-0.5 bg-gradient-to-r from-primary to-gold" />
+            {/* Massive headline */}
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.7 }}
+              className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] text-white leading-[1.02] tracking-tight"
+            >
+              Révélez votre
+              <br />
+              <span className="relative inline-block mt-1">
+                <span className="italic bg-gradient-to-r from-rose-300 via-pink-300 to-rose-400 bg-clip-text text-transparent">
+                  éclat naturel
+                </span>
+                <motion.span
+                  className="absolute -bottom-1 start-0 end-0 h-1 bg-gradient-to-r from-rose-400 via-pink-400 to-amber-300 rounded-full"
+                  initial={{ scaleX: 0, originX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ delay: 0.9, duration: 0.7 }}
+                />
               </span>
-            </h1>
+            </motion.h1>
 
             {/* Subtitle */}
-            <p className="text-ink/60 text-base md:text-lg leading-relaxed max-w-md">
-              {t('subtitle')}
-            </p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              className="text-cream/70 text-base md:text-lg leading-relaxed max-w-md"
+            >
+              Des soins de luxe formulés avec les ingrédients les plus précieux pour une peau radieuse et sublimée.
+            </motion.p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
-              <Link href={`${base}/boutique`} className="btn-primary group">
-                {t('cta_primary')}
-                <ArrowRight size={15} className="transition-transform group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" />
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.65 }}
+              className="flex flex-wrap items-center gap-3 pt-1"
+            >
+              <Link
+                href={`${base}/boutique`}
+                className="group relative inline-flex items-center gap-2.5 px-7 py-4 rounded-full bg-gradient-to-r from-rose-600 to-pink-700 text-white font-semibold text-sm shadow-lg shadow-rose-900/40 hover:shadow-rose-700/60 hover:scale-[1.02] transition-all"
+              >
+                Découvrir la Collection
+                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </Link>
-              <Link href={`${base}/boutique`} className="btn-outline">
-                {t('cta_secondary')}
-              </Link>
-            </div>
 
-            {/* Trust badges row — rating + authenticity */}
-            <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-primary/10">
-              {/* Rating pill */}
-              <div className="inline-flex items-center gap-2 bg-white shadow-soft rounded-full px-3 py-1.5">
-                <div className="flex items-center gap-0.5">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} size={12} className="fill-gold text-gold" />
-                  ))}
+              <Link
+                href={`${base}/boutique`}
+                className="inline-flex items-center justify-center px-7 py-4 rounded-full border-2 border-gold text-gold font-semibold text-sm hover:bg-gold hover:text-white transition-colors"
+              >
+                Voir tout
+              </Link>
+            </motion.div>
+
+            {/* Stats row with icons */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+              className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-5 pt-7 border-t border-white/10"
+            >
+              {[
+                { icon: Users, num: '10K+', label: 'Clientes heureuses' },
+                { icon: Package, num: '40+', label: 'Produits de qualité' },
+                { icon: Star, num: '4.9/5', label: 'Note moyenne' },
+                { icon: Truck, num: '', label: 'Livraison rapide & sécurisée' },
+              ].map(({ icon: Icon, num, label }) => (
+                <div key={label} className="flex flex-col gap-1.5">
+                  <Icon size={20} className="text-amber-300/80" strokeWidth={1.5} />
+                  {num && (
+                    <p className="font-serif text-2xl md:text-3xl text-white font-bold leading-none">
+                      {num}
+                    </p>
+                  )}
+                  <p className="text-[11px] md:text-xs text-cream/60 leading-tight">
+                    {label}
+                  </p>
                 </div>
-                <span className="text-xs font-semibold text-ink">4.9</span>
-                <span className="text-xs text-ink/50">· 2,847 avis</span>
-              </div>
+              ))}
+            </motion.div>
+          </motion.div>
 
-              {/* Authenticity pill */}
-              <div className="inline-flex items-center gap-1.5 bg-green-50 rounded-full px-3 py-1.5">
-                <ShieldCheck size={13} className="text-green-600" />
-                <span className="text-xs font-semibold text-green-700">100% Authentique</span>
-              </div>
+          {/* ===== Right column: Product showcase ===== */}
+          <motion.div
+            className="relative aspect-square max-w-lg mx-auto w-full"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+          >
+            {/* "Recommandé par les dermatologues" badge top-right */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ delay: 0.8, type: 'spring' }}
+              className="absolute top-2 end-2 lg:top-0 lg:end-0 z-30 w-24 h-24 md:w-28 md:h-28 rounded-full border border-gold/40 bg-[#1a0a14]/80 backdrop-blur-sm flex flex-col items-center justify-center text-center p-3"
+            >
+              <p className="text-[9px] md:text-[10px] text-gold/70 mb-1">↓</p>
+              <p className="font-serif text-[10px] md:text-xs text-gold leading-tight font-semibold">
+                Recommandé<br/>par les<br/>dermatologues
+              </p>
+              <Check size={12} className="text-gold mt-1" strokeWidth={2.5} />
+            </motion.div>
 
-              {/* Free shipping pill */}
-              <div className="hidden sm:inline-flex items-center gap-1.5 bg-primary-light rounded-full px-3 py-1.5">
-                <span className="text-xs font-semibold text-primary">Livraison gratuite dès 500 DH</span>
-              </div>
-            </div>
-          </div>
+            {/* Marble podium */}
+            <div className="absolute bottom-[8%] start-1/2 -translate-x-1/2 w-[85%] h-[18%] rounded-full bg-gradient-to-b from-stone-100/15 via-stone-200/10 to-stone-300/5 border-t border-stone-100/20 blur-sm" />
+            <div className="absolute bottom-[10%] start-1/2 -translate-x-1/2 w-[80%] h-[14%] rounded-full bg-gradient-to-b from-stone-200/20 to-transparent border border-stone-100/15" />
 
-          {/* Image column */}
-          <div className={`relative ${isRtl ? 'lg:order-1' : 'lg:order-2'}`}>
-            <div className="relative w-full max-w-lg mx-auto">
-              {/* Decorative ring — animate only after mount */}
-              {mounted && (
+            {/* Product collage — CeraVe products */}
+            <div className="relative w-full h-full">
+              {showcaseProducts[0] && (
                 <motion.div
-                  className="absolute -inset-4 border-2 border-gold/30"
-                  animate={{ borderRadius: ['40% 60% 60% 40% / 40% 40% 60% 60%', '60% 40% 40% 60% / 60% 60% 40% 40%', '40% 60% 60% 40% / 40% 40% 60% 60%'] }}
-                  transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-                  style={{ borderRadius: '40% 60% 60% 40% / 40% 40% 60% 60%' }}
-                />
+                  initial={{ y: 40, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.4, duration: 0.7 }}
+                  className="absolute top-[12%] start-[8%] w-[28%] h-[55%] rounded-2xl overflow-hidden shadow-2xl shadow-black/70 bg-white"
+                >
+                  <Image
+                    src={showcaseProducts[0].image}
+                    alt={showcaseProducts[0].name.fr}
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 30vw, 18vw"
+                    className="object-contain"
+                  />
+                </motion.div>
               )}
 
-              {/* Pink blob background */}
-              <div className="absolute inset-0 bg-primary/10 blur-2xl" style={{ borderRadius: '40% 60% 60% 40% / 40% 40% 60% 60%' }} />
-
-              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-pink-lg">
-                <Image
-                  src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&auto=format&fit=crop&q=90"
-                  alt="Grow Beauty luxury skincare"
-                  fill
-                  priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
-              </div>
-
-              {/* Floating product card */}
-              <div className="absolute -bottom-4 -start-4 bg-white rounded-2xl p-4 shadow-luxury flex items-center gap-3 max-w-[180px]">
-                <div className="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0">
+              {showcaseProducts[1] && (
+                <motion.div
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.5, duration: 0.7 }}
+                  className="absolute top-[6%] start-[36%] w-[28%] h-[60%] rounded-2xl overflow-hidden shadow-2xl shadow-black/70 bg-white z-20"
+                >
                   <Image
-                    src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=100&auto=format&fit=crop&q=80"
-                    alt="Product"
-                    width={48}
-                    height={48}
-                    className="object-cover w-full h-full"
+                    src={showcaseProducts[1].image}
+                    alt={showcaseProducts[1].name.fr}
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 30vw, 18vw"
+                    className="object-contain"
                   />
-                </div>
-                <div>
-                  <p className="text-xs font-semibold text-ink leading-tight">
-                    {locale === 'ar' ? 'سيروم الإشراق' : 'Sérum Éclat'}
-                  </p>
-                  <p className="text-xs text-primary font-bold mt-0.5">249 DH</p>
-                </div>
-              </div>
+                </motion.div>
+              )}
 
-              {/* Rating badge */}
-              <div className="absolute -top-3 -end-3 bg-gold text-white rounded-2xl px-3 py-2 shadow-luxury text-center">
-                <p className="text-xs font-bold">4.9 ★</p>
-                <p className="text-[9px] opacity-80">{locale === 'ar' ? 'تقييم' : 'Note'}</p>
-              </div>
+              {showcaseProducts[2] && (
+                <motion.div
+                  initial={{ y: 40, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.6, duration: 0.7 }}
+                  className="absolute top-[14%] start-[64%] w-[26%] h-[52%] rounded-2xl overflow-hidden shadow-2xl shadow-black/70 bg-white"
+                >
+                  <Image
+                    src={showcaseProducts[2].image}
+                    alt={showcaseProducts[2].name.fr}
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 30vw, 18vw"
+                    className="object-contain"
+                  />
+                </motion.div>
+              )}
+
+              {showcaseProducts[3] && (
+                <motion.div
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.7, duration: 0.7 }}
+                  className="absolute bottom-[16%] start-[42%] w-[24%] h-[34%] rounded-2xl overflow-hidden shadow-2xl shadow-black/70 bg-white z-30"
+                >
+                  <Image
+                    src={showcaseProducts[3].image}
+                    alt={showcaseProducts[3].name.fr}
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 30vw, 18vw"
+                    className="object-contain"
+                  />
+                </motion.div>
+              )}
             </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Bottom wave */}
-      <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" aria-hidden="true">
-          <path d="M0 60L60 50C120 40 240 20 360 15C480 10 600 20 720 25C840 30 960 30 1080 25C1200 20 1320 10 1380 5L1440 0V60H0Z" fill="white" fillOpacity="0.5" />
-        </svg>
+            {/* Brand name etched on podium */}
+            <p className="absolute bottom-[6%] start-1/2 -translate-x-1/2 font-serif text-2xl text-amber-200/30 italic tracking-wider">
+              CeraVe
+            </p>
+          </motion.div>
+        </div>
+
+        {/* Bottom-right dots indicator */}
+        <div className="absolute bottom-8 end-8 flex items-center gap-1.5 z-20">
+          {[0, 1, 2, 3, 4].map((i) => (
+            <span
+              key={i}
+              className={`h-1 transition-all rounded-full ${
+                i === 2 ? 'w-8 bg-white' : 'w-1.5 bg-white/30'
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   )
