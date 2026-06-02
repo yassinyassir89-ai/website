@@ -45,34 +45,27 @@ export function Navbar() {
       <header
         className={cn(
           'sticky top-0 z-50 transition-all duration-500',
-          isScrolled
-            ? 'glass-nav'
-            : 'bg-gradient-to-r from-[#1a0a14] via-[#2d0f1c] to-[#1a0a14] border-b border-amber-500/10'
+          isScrolled ? 'glass-nav' : 'bg-cream border-b border-primary/10'
         )}
       >
         <div className="luxury-container">
           <div className="flex items-center justify-between h-18 py-3">
 
-            {/* Hamburger menu (visible on all sizes when at top, mobile-only when scrolled) */}
+            {/* Mobile hamburger */}
             <button
               onClick={() => setIsMobileOpen(true)}
-              className={cn(
-                'p-2 transition-colors rounded-lg',
-                isScrolled
-                  ? 'lg:hidden text-ink hover:text-primary'
-                  : 'text-cream hover:text-gold'
-              )}
+              className="lg:hidden p-2 text-ink hover:text-primary transition-colors rounded-lg"
               aria-label="Open menu"
             >
               <Menu size={22} />
             </button>
 
-            {/* Logo (dark variant when at top) */}
-            <Logo size="md" showTagline variant={isScrolled ? 'light' : 'dark'} />
+            {/* Logo */}
+            <Logo size="md" showTagline />
 
 
-            {/* Desktop nav — hidden when at top (replaced by hamburger) */}
-            <nav className={cn('hidden items-center gap-8', isScrolled && 'lg:flex')}>
+            {/* Desktop nav */}
+            <nav className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -89,10 +82,7 @@ export function Navbar() {
             <div className="flex items-center gap-1 sm:gap-2">
               <button
                 onClick={() => setIsSearchOpen((o) => !o)}
-                className={cn(
-                  'p-2 transition-colors rounded-lg',
-                  isScrolled ? 'text-ink hover:text-primary hover:bg-primary-light' : 'text-cream hover:text-gold'
-                )}
+                className="p-2 text-ink hover:text-primary transition-colors rounded-lg hover:bg-primary-light"
                 aria-label={t('search_placeholder')}
               >
                 <Search size={20} />
@@ -100,10 +90,7 @@ export function Navbar() {
 
               <Link
                 href={`${base}/favoris`}
-                className={cn(
-                  'relative p-2 transition-colors rounded-lg',
-                  isScrolled ? 'text-ink hover:text-primary hover:bg-primary-light' : 'text-cream hover:text-gold'
-                )}
+                className="relative p-2 text-ink hover:text-primary transition-colors rounded-lg hover:bg-primary-light"
                 aria-label={t('wishlist')}
               >
                 <Heart size={20} />
@@ -121,10 +108,7 @@ export function Navbar() {
 
               <Link
                 href={`${base}/panier`}
-                className={cn(
-                  'relative p-2 transition-colors rounded-lg',
-                  isScrolled ? 'text-ink hover:text-primary hover:bg-primary-light' : 'text-cream hover:text-gold'
-                )}
+                className="relative p-2 text-ink hover:text-primary transition-colors rounded-lg hover:bg-primary-light"
                 aria-label={t('cart')}
               >
                 <ShoppingBag size={20} />
