@@ -625,6 +625,78 @@ export const mockProducts: MockProduct[] = [
     isNew: true,
     brandId: "bioderma",
   },
+  {
+    id: '55',
+    name: {
+      fr: 'Eucerin Oil Control SPF 50+ Sun Protection',
+      ar: 'يوسرين أويل كنترول SPF 50+ حماية شمسية',
+    },
+    category: { fr: 'Protection solaire', ar: 'الحماية الشمسية' },
+    description: {
+      fr: "Eucerin Écran Oil Control SPF 50+ offre une protection optimale contre les rayons nocifs du soleil pour les peaux grasses et mixtes sujettes à l'acné. Sa formule avec matifiant et ses actifs anti-brillance longue durée neutralisent les reflets et maintiennent une peau saine et lisse.",
+      ar: 'يوسرين شاشة أويل كنترول SPF 50+ توفر حماية مثالية ضد أشعة الشمس الضارة للبشرات الدهنية والمختلطة المعرضة لحب الشباب. تركيبتها بمواد مطفية للمعان ومضادة للبريق طويلة المفعول تحيّد الانعكاسات وتحافظ على بشرة صحية وناعمة.',
+    },
+    price: 140,
+    rating: 4.7,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/products/EUCERIN_SUN_PROTECTION_PHOTOAGING_CONTROL_Fluid_SPF_50.jpg?v=1713727918&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '56',
+    name: {
+      fr: 'Eucerin Hyaluron-Filler Soin De Jour 50ml',
+      ar: 'يوسرين هيالورون-فيلر كريم نهاري 50 مل',
+    },
+    category: { fr: 'Soin du visage', ar: 'العناية بالبشرة' },
+    description: {
+      fr: "Découvrez Eucerin Hyaluron-Filler Soin De Jour 50ml, le soin anti-âge adapté aux peaux sèches. Grâce à sa formule au [Hyal] Complex, il lutte efficacement contre les rides et le vieillissement cutané en hydratant et comblant les rides grâce à l'acide hyaluronique, en stimulant sa production naturelle et en le protégeant avec l'enoxolone. Profitez d'une peau plus belle et plus jeune.",
+      ar: 'اكتشفي يوسرين هيالورون-فيلر كريم نهاري 50 مل، عناية مضادة للشيخوخة مناسبة للبشرات الجافة. بفضل تركيبتها بـ [Hyal] Complex، تكافح بفعالية التجاعيد وشيخوخة البشرة عن طريق الترطيب وملء التجاعيد بحمض الهيالورونيك، وتحفّز إنتاجه الطبيعي وتحميه بالإينوكسولون. استمتعي ببشرة أجمل وأصغر سناً.',
+    },
+    price: 265,
+    rating: 4.8,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/DTER.webp?v=1705666309&width=493',
+    badge: { fr: 'Bestseller', ar: 'الأكثر مبيعاً' },
+    isBestSeller: true,
+  },
+  {
+    id: '57',
+    name: {
+      fr: 'Eucerin Anti-Pigment Soin de Jour SPF 30',
+      ar: 'يوسرين أنتي-بيغمنت كريم نهاري SPF 30',
+    },
+    category: { fr: 'Soin du visage', ar: 'العناية بالبشرة' },
+    description: {
+      fr: "Crème de jour au Thiamidol\n\n• Réduit efficacement les taches brunes et empêche leur réapparition\n• Protection UVA/UVB\n\nTaches, manque d'éclat ? 1ers résultats visibles dès 2 semaines pour une peau uniforme et éclatante.",
+      ar: 'كريم نهاري بالثيامايدول\n\n• يقلّل بفعالية البقع الداكنة ويمنع ظهورها مجدداً\n• حماية UVA/UVB\n\nبقع، فقدان إشراق؟ النتائج الأولى مرئية منذ أسبوعين للحصول على بشرة موحدة ومشرقة.',
+    },
+    price: 275,
+    rating: 4.8,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/Eucerin_ANTI-PIGMENT_SOIN_DE_JOUR_SPF_30_50_ML.jpg?v=1724261560&width=493',
+    badge: { fr: 'Bestseller', ar: 'الأكثر مبيعاً' },
+    isBestSeller: true,
+  },
+  {
+    id: '58',
+    name: {
+      fr: 'Bioderma Sensibio Gel Moussant Nettoyant Douceur 200ml',
+      ar: 'بيوديرما سينسيبيو جل رغوي منظف لطيف 200 مل',
+    },
+    category: { fr: 'Soin du visage', ar: 'العناية بالبشرة' },
+    description: {
+      fr: "Le gel moussant micellaire qui renforce l'hydratation naturelle de la peau.\n\n• Nettoie et démaquille le visage et les yeux en douceur\n• Hydrate\n• Apaise et calme les irritations\n• Très bonne tolérance cutanée et oculaire\n• Non comédogène — Ne contient pas de savon — Non parfumé — pH physiologique",
+      ar: 'الجل الرغوي الميسيلي الذي يعزز الترطيب الطبيعي للبشرة.\n\n• ينظّف ويزيل المكياج عن الوجه والعينين بلطف\n• يرطّب\n• يهدّئ ويخفّف التهيجات\n• تحمّل جلدي وعيني ممتاز\n• غير مسبب لانسداد المسام — خالٍ من الصابون — بدون عطور — pH متوازن',
+    },
+    price: 180,
+    rating: 4.8,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/design-sans-titre---2025-12-27t165827-155-6950026e81750.png?v=1766851184&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
 ]
 
 export const featuredProducts = mockProducts.slice(0, 12)
@@ -738,6 +810,24 @@ export const mockBrands: MockBrand[] = [
       headlineFr: 'La biologie au service de la peau',
     },
   },
+  {
+    id: 'eucerin',
+    name: 'Eucerin',
+    tagline: { fr: 'L\'expertise dermatologique allemande', ar: 'الخبرة الجلدية الألمانية' },
+    description: {
+      fr: "Eucerin est une marque dermatologique allemande de référence, fondée à Hambourg en 1900 et reconnue mondialement pour son expertise scientifique. Recommandée par les dermatologues, elle développe des soins efficaces pour les peaux sensibles, sèches, mixtes ou présentant des problèmes spécifiques. Ses gammes phares Hyaluron-Filler, Anti-Pigment, Sun Protection et AQUAporin allient innovation pharmaceutique et tolérance optimale.",
+      ar: 'يوسرين علامة جلدية ألمانية رائدة، تأسست في هامبورغ عام 1900 ومعتمدة عالمياً بخبرتها العلمية. موصى بها من أطباء الجلد، تطوّر منتجات عناية فعّالة للبشرات الحساسة والجافة والمختلطة أو ذات المشاكل المحددة. مجموعاتها الرئيسية هيالورون-فيلر، أنتي-بيغمنت، الحماية الشمسية و AQUAporin تجمع بين الابتكار الصيدلي والتحمّل الأمثل.',
+    },
+    logo: 'https://haytamparfumerie.com/cdn/shop/products/EUCERIN_SUN_PROTECTION_PHOTOAGING_CONTROL_Fluid_SPF_50.jpg?v=1713727918&width=200',
+    cover: 'https://haytamparfumerie.com/cdn/shop/files/Eucerin_ANTI-PIGMENT_SOIN_DE_JOUR_SPF_30_50_ML.jpg?v=1724261560&width=1200',
+    origin: { fr: 'Allemagne', ar: 'ألمانيا' },
+    productCount: 3,
+    spotlight: {
+      bgClass: 'bg-[#1c3a4f]',
+      accentClass: 'text-amber-200',
+      headlineFr: 'Pharmacie allemande depuis 1900',
+    },
+  },
 ]
 
 // Assign products to brands — smart category-based rules
@@ -748,6 +838,8 @@ mockProducts.forEach((p, i) => {
   else if (/roche[\s-]?posay/i.test(p.name.fr)) p.brandId = 'la-roche-posay'
   // Bioderma products → Bioderma brand
   else if (/\bbioderma\b/i.test(p.name.fr)) p.brandId = 'bioderma'
+  // Eucerin products → Eucerin brand
+  else if (/\beucerin\b/i.test(p.name.fr)) p.brandId = 'eucerin'
   // Sunscreen products always go to Soleil Dorée
   else if (p.category.fr === 'Protection solaire') p.brandId = 'soleil-doree'
   // Moroccan products (perfumes, argan-based) go to Rose d'Orient
