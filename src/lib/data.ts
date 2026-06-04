@@ -697,6 +697,78 @@ export const mockProducts: MockProduct[] = [
     badge: { fr: 'Nouveau', ar: 'جديد' },
     isNew: true,
   },
+  {
+    id: '59',
+    name: {
+      fr: 'Eucerin DermoPure Clinical Correcting Cleanser — Acne Prone Skin',
+      ar: 'يوسرين ديرموبيور كلينيكال غسول تصحيحي — للبشرة المعرضة لحب الشباب',
+    },
+    category: { fr: 'Soin du visage', ar: 'العناية بالبشرة' },
+    description: {
+      fr: "C'est un produit traitant conçu pour les personnes qui ont de l'acné, des points noirs ou des taches laissées par d'anciens boutons. Il s'agit d'un nettoyant visage (et corps) intensif de la gamme DermoPure de chez Eucerin.\n\nPlus précisément, c'est un produit traitant conçu pour les personnes qui ont de l'acné, des points noirs ou des taches laissées par d'anciens boutons.",
+      ar: 'منتج علاجي مصمم للأشخاص الذين يعانون من حب الشباب أو الرؤوس السوداء أو البقع الناتجة عن البثور القديمة. هو منظف وجه (وجسم) مكثف من مجموعة ديرموبيور من يوسرين.\n\nبشكل أكثر تحديداً، هو منتج علاجي مصمم للأشخاص الذين يعانون من حب الشباب أو الرؤوس السوداء أو البقع الناتجة عن البثور القديمة.',
+    },
+    price: 140,
+    rating: 4.7,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/Design_sans_titre_-_2026-01-20T210559.936.png?v=1768939894&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '60',
+    name: {
+      fr: 'Eucerin DermoPure Gommage 100ml',
+      ar: 'يوسرين ديرموبيور مقشّر 100 مل',
+    },
+    category: { fr: 'Soin du visage', ar: 'العناية بالبشرة' },
+    description: {
+      fr: "Gommage pour peau à tendance acnéique enrichi en microparticules qui affinent les pores.\n\nLe gommage Eucerin DermoPure, idéal pour une utilisation quotidienne, contient des ingrédients doux et sans savon pour un nettoyage en profondeur. Sa formule unique élimine efficacement les impuretés et laisse votre peau propre et saine. Profitez d'une peau impeccable avec Eucerin DermoPure Gommage.",
+      ar: 'مقشّر للبشرة المعرضة لحب الشباب غني بجزيئات دقيقة تشدّ المسام.\n\nمقشّر يوسرين ديرموبيور، مثالي للاستخدام اليومي، يحتوي على مكونات لطيفة وخالية من الصابون لتنظيف عميق. تركيبته الفريدة تزيل الشوائب بفعالية وتترك بشرتك نظيفة وصحية. استمتعي ببشرة نقية مع مقشّر يوسرين ديرموبيور.',
+    },
+    price: 135,
+    rating: 4.6,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/EUCERIN_DermoPure_Gommage_100_Ml.jpg?v=1724264586&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '61',
+    name: {
+      fr: 'Eucerin Gel Nettoyant DermoPure 200ml',
+      ar: 'يوسرين جل منظف ديرموبيور 200 مل',
+    },
+    category: { fr: 'Soin du visage', ar: 'العناية بالبشرة' },
+    description: {
+      fr: "Gel nettoyant pour peau à tendance acnéique contenant 6% de tensioactifs.\n\nLe gel nettoyant DermoPure de Eucerin est conçu pour un usage quotidien, contenant des tensioactifs et sans savon pour un nettoyage doux et efficace. Profitez d'une peau propre et saine grâce à sa formule spécifique pour les peaux à problèmes. Idéal pour les peaux sensibles.",
+      ar: 'جل منظف للبشرة المعرضة لحب الشباب يحتوي على 6% من المنظفات الفعّالة.\n\nجل يوسرين ديرموبيور المنظف مصمم للاستخدام اليومي، يحتوي على منظفات فعّالة وخالٍ من الصابون لتنظيف لطيف وفعّال. استمتعي ببشرة نظيفة وصحية بفضل تركيبته الخاصة بالبشرات المعرضة للمشاكل. مثالي للبشرات الحساسة.',
+    },
+    price: 150,
+    rating: 4.7,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/design-sans-titre---2026-01-20t210004-489-696fdefaa2965.png?v=1768939295&width=493',
+    badge: { fr: 'Bestseller', ar: 'الأكثر مبيعاً' },
+    isBestSeller: true,
+  },
+  {
+    id: '62',
+    name: {
+      fr: 'Eucerin DermoPure Crème Corps Triple Action 200ml',
+      ar: 'يوسرين ديرموبيور كريم جسم Triple Action 200 مل',
+    },
+    category: { fr: 'Soin du corps', ar: 'العناية بالجسم' },
+    description: {
+      fr: "Réduisez efficacement les imperfections et les marques post-acné sur votre corps avec la crème Eucerin DermoPure Triple Action. Grâce à sa formule spécialement conçue, votre peau sera plus lisse et plus uniforme. Obtenez une peau parfaite sans traces résiduelles.",
+      ar: 'قلّلي بفعالية العيوب وعلامات ما بعد حب الشباب على جسمك مع كريم يوسرين ديرموبيور Triple Action. بفضل تركيبته المصممة خصيصاً، ستكون بشرتك أنعم وأكثر توحيداً. احصلي على بشرة مثالية بدون آثار متبقية.',
+    },
+    price: 220,
+    rating: 4.8,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/198ff43988cdbf81ab36d3b3f58e07dbe1a78111_fr_FR.png?v=1728993324&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
 ]
 
 export const featuredProducts = mockProducts.slice(0, 12)
