@@ -17,8 +17,6 @@ import { Testimonials } from '@/components/home/Testimonials'
 import { Newsletter } from '@/components/home/Newsletter'
 import { InstagramGallery } from '@/components/home/instagram-gallery'
 
-export const dynamic = 'force-dynamic'
-
 export default function HomePage({ params: { locale } }: { params: { locale: string } }) {
   unstable_setRequestLocale(locale)
 
