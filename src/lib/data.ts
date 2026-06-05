@@ -913,6 +913,60 @@ export const mockProducts: MockProduct[] = [
     badge: { fr: 'Nouveau', ar: 'جديد' },
     isNew: true,
   },
+  {
+    id: '71',
+    name: {
+      fr: 'Garnier Ambre Solaire Sensitive Expert+ Brume Sèche Protectrice SPF50+',
+      ar: 'غارنييه أمبر سولير Sensitive Expert+ بخاخ جاف واقٍ SPF50+',
+    },
+    category: { fr: 'Protection solaire', ar: 'الحماية الشمسية' },
+    description: {
+      fr: "Découvrez la protection solaire haute performance avec Garnier Ambre Solaire Sensitive Expert+ SPF50+, une brume sèche protectrice spécialement conçue pour les peaux claires, sensibles et intolérantes au soleil. Sa formule légère et non grasse offre une très haute protection contre les rayons UVA et UVB, tout en laissant un fini sec et confortable sur la peau. Grâce à sa texture brume ultra-légère, cette protection solaire est facile à appliquer et pénètre rapidement sans effet collant. Hypoallergénique, sans parfum et sans alcool, elle convient parfaitement aux peaux sensibles recherchant une protection efficace au quotidien.",
+      ar: 'اكتشفي الحماية الشمسية عالية الأداء مع غارنييه أمبر سولير Sensitive Expert+ SPF50+، بخاخ جاف واقٍ مصمم خصيصاً للبشرة الفاتحة والحساسة وغير المتحملة للشمس. تركيبته الخفيفة وغير الدهنية توفر حماية عالية جداً ضد أشعة UVA و UVB، مع ترك لمسة جافة ومريحة على البشرة. بفضل قوامه فائق الخفة، يسهل تطبيقه ويتغلغل بسرعة دون أثر لزج. مضاد للحساسية، خالٍ من العطر والكحول.',
+    },
+    price: 90,
+    rating: 4.7,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/garnier-ambre-solaire-sensitive-expert--brume-s--che-protectrice-spf50-6a1047949a685.jpg?v=1779451798&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '72',
+    name: {
+      fr: 'Garnier Ambre Solaire Ideal Bronze Huile Protectrice Sublimatrice SPF 20',
+      ar: 'غارنييه أمبر سولير Ideal Bronze زيت واقٍ مُبرز للسمرة SPF 20',
+    },
+    category: { fr: 'Protection solaire', ar: 'الحماية الشمسية' },
+    description: {
+      fr: "Obtenez un bronzage lumineux et uniforme tout en protégeant votre peau avec l'huile protectrice sublimatrice Garnier Ambre Solaire Ideal Bronze SPF 20. Sa formule légère aide à nourrir la peau et à révéler un fini satiné éclatant pendant l'exposition au soleil. Enrichie en huiles nourrissantes, cette huile solaire offre une protection moyenne contre les rayons UVA et UVB tout en sublimant le bronzage naturel de la peau. Sa texture non grasse pénètre facilement pour un confort optimal.",
+      ar: 'احصلي على سمرة مشرقة ومتجانسة مع حماية بشرتك بزيت غارنييه أمبر سولير Ideal Bronze SPF 20 الواقي والمبرز للسمرة. تركيبته الخفيفة تساعد على تغذية البشرة وإظهار لمسة ساتانية متألقة أثناء التعرض للشمس. غني بالزيوت المغذية، يوفر هذا الزيت الشمسي حماية متوسطة ضد أشعة UVA و UVB مع إبراز السمرة الطبيعية للبشرة. قوامه غير الدهني يتغلغل بسهولة لراحة مثالية.',
+    },
+    price: 90,
+    rating: 4.6,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/black-and-white-aesthetic-minimalist-modern-simple-typography-coconut-cosmetics-logo-6a18c6ab3ad84.png?v=1780008621&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '73',
+    name: {
+      fr: 'Garnier Ambre Solaire Ideal Bronze Spray Protecteur Révélateur de Bronzage SPF 30',
+      ar: 'غارنييه أمبر سولير Ideal Bronze بخاخ واقٍ مُظهر للسمرة SPF 30',
+    },
+    category: { fr: 'Protection solaire', ar: 'الحماية الشمسية' },
+    description: {
+      fr: "Découvrez le spray solaire Garnier Ambre Solaire Ideal Bronze SPF 30, conçu pour protéger la peau tout en révélant un bronzage uniforme et lumineux. Sa formule légère aide à obtenir un teint éclatant naturellement pendant l'exposition au soleil. Grâce à sa haute protection UVA et UVB, ce spray solaire protège efficacement la peau contre les effets du soleil tout en offrant une texture agréable et facile à appliquer.",
+      ar: 'اكتشفي بخاخ غارنييه أمبر سولير Ideal Bronze SPF 30 الشمسي، المصمم لحماية البشرة مع إظهار سمرة متجانسة ومشرقة. تركيبته الخفيفة تساعد على الحصول على بشرة متألقة بشكل طبيعي أثناء التعرض للشمس. بفضل حمايته العالية ضد أشعة UVA و UVB، يحمي هذا البخاخ الشمسي البشرة بفعالية من تأثيرات الشمس مع توفير قوام لطيف وسهل التطبيق.',
+    },
+    price: 90,
+    rating: 4.6,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/black-and-white-aesthetic-minimalist-modern-simple-typography-coconut-cosmetics-logo-6a18c61d68482.png?v=1780008479&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
 ]
 
 export const featuredProducts = mockProducts.slice(0, 12)
