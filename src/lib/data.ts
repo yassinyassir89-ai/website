@@ -67,6 +67,13 @@ export const mockCategories: MockCategory[] = [
     count: 18,
   },
   {
+    id: 'maquillage',
+    name: { fr: 'Maquillage', ar: 'المكياج' },
+    image: 'https://images.unsplash.com/photo-1522335789203-aaa4e1f93ed8?w=400&auto=format&fit=crop&q=80',
+    href: '/boutique?category=maquillage',
+    count: 0,
+  },
+  {
     id: 'coffrets',
     name: { fr: 'Coffrets cadeaux', ar: 'علب الهدايا' },
     image: 'https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=400&auto=format&fit=crop&q=80',
