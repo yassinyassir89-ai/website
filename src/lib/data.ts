@@ -974,6 +974,141 @@ export const mockProducts: MockProduct[] = [
     badge: { fr: 'Nouveau', ar: 'جديد' },
     isNew: true,
   },
+  {
+    id: '74',
+    name: { fr: 'Topface Perfect Coverage Foundation', ar: 'توب فيس كريم أساس Perfect Coverage' },
+    category: { fr: 'Maquillage', ar: 'المكياج' },
+    description: {
+      fr: "Topface Lasting Color — couverture parfaite, longue tenue toute la journée, formule hydratante tout en un. L'extrait de Palmaria Palmata aide à réduire les signes de fatigue sur la peau et lui donne un aspect plus vif, tandis que les minéraux contenus dans la formule aident à maintenir l'équilibre hydrique de la peau. Le FPS 20 offre une protection contre les rayons UV nocifs. Une formule non invasive et parfaitement compatible pour une expérience de maquillage parfaite.",
+      ar: 'توب فيس Lasting Color — تغطية مثالية، ثبات طوال اليوم، تركيبة مرطبة الكل في واحد. خلاصة Palmaria Palmata تساعد على تقليل علامات التعب على البشرة ومنحها مظهراً أكثر حيوية، بينما تساعد المعادن في الحفاظ على التوازن المائي للبشرة. SPF 20 يوفر حماية ضد الأشعة فوق البنفسجية الضارة.',
+    },
+    price: 110,
+    rating: 4.7,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/32495439_Topface-Perfect-Coverage-Foundation-N-680x680.png?v=1702740759&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '75',
+    name: { fr: 'Topface Baked Choice Rich Touch Blush On', ar: 'توب فيس بلاش Baked Choice Rich Touch' },
+    category: { fr: 'Maquillage', ar: 'المكياج' },
+    description: {
+      fr: "Rich Touch Baked Blush On — avec sa formule unique et ses couleurs vibrantes, il donne un aspect lisse et attrayant. Sa formule enrichie en complexe minéral et en vitamine E offre à la peau un aspect sain et énergique.",
+      ar: 'بلاش Rich Touch المخبوز — بتركيبته الفريدة وألوانه النابضة بالحياة، يمنح مظهراً ناعماً وجذاباً. تركيبته الغنية بمركب المعادن وفيتامين E تمنح البشرة مظهراً صحياً ومفعماً بالطاقة.',
+    },
+    price: 60,
+    rating: 4.6,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/Screenshot2023-12-16165224.png?v=1702741997&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '76',
+    name: { fr: 'Topface Instyle Extra Black Rich Curl Mascara', ar: 'توب فيس ماسكارا Instyle Extra Black Rich Curl' },
+    category: { fr: 'Maquillage', ar: 'المكياج' },
+    description: {
+      fr: "En une seule touche : un volume supplémentaire, des cils extra longs et extra noirs, un look glamour et durable.",
+      ar: 'بلمسة واحدة: حجم إضافي، رموش طويلة جداً وسوداء جداً، إطلالة فاتنة وطويلة الأمد.',
+    },
+    price: 30,
+    rating: 4.5,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/pdt2_3_0_9_1_700x700_AAAAB26309.jpg?v=1702742112&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '77',
+    name: { fr: 'Topface Instyle Extreme Matte Lip Paint', ar: 'توب فيس Instyle Extreme أحمر شفاه مات' },
+    category: { fr: 'Maquillage', ar: 'المكياج' },
+    description: {
+      fr: "Extreme Matte Lip Paint pour une finition mate nette en une seule application. Le rouge à lèvres liquide intense longue tenue protège vos lèvres contre le dessèchement grâce à sa texture légère contenant de la vitamine E et de l'huile de macadamia, qui gardent sa couleur et son effet protecteur toute la journée — jusqu'à 12 heures.",
+      ar: 'أحمر شفاه سائل مات Extreme Matte Lip Paint للحصول على لمسة نهائية مات نظيفة بتطبيق واحد. خط أحمر الشفاه السائل المكثف طويل الأمد يحمي شفتيك من الجفاف بفضل قوامه الخفيف الذي يحتوي على فيتامين E وزيت المكاديميا، يدوم حتى 12 ساعة.',
+    },
+    price: 50,
+    rating: 4.6,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/topface-instyle-extreme-matte-lip-paint-014-parfumerie-parapharmacie-palmarosa-shop-maroc-en-ligne-discount_1.jpg?v=1702744328&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '78',
+    name: { fr: 'Topface Instyle Eyebrow Gel', ar: 'توب فيس جل الحواجب Instyle' },
+    category: { fr: 'Maquillage', ar: 'المكياج' },
+    description: {
+      fr: "Eyebrow Gel — une formule non pénétrante et résistante à l'eau rend vos sourcils plus distinctifs. Remplissez les espaces entre les sourcils et protégez leur forme. Il aide à avoir des sourcils plus forts grâce à sa riche teneur en huile d'amande et huile soyeuse. Texture crémeuse et pinceau pratique pour une application facile et une riche pigmentation.",
+      ar: 'جل الحواجب — تركيبة غير منفذة ومقاومة للماء تجعل حواجبك أكثر تميزاً. املئي الفراغات بين الحواجب واحمي شكلها. يساعد على الحصول على حواجب أقوى بفضل محتواه الغني بزيت اللوز والزيت الحريري. قوام كريمي وفرشاة عملية للتطبيق السهل.',
+    },
+    price: 55,
+    rating: 4.6,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/Instyle-Eyebrow-Gel-003.jpg?v=1701567372&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '79',
+    name: { fr: 'Topface Skin Editor Matte Foundation', ar: 'توب فيس كريم أساس مات Skin Editor' },
+    category: { fr: 'Maquillage', ar: 'المكياج' },
+    description: {
+      fr: "Skin Editor Matte Foundation est un fond de teint enrichi d'un mélange d'actifs pour une action matifiante. Les riches minéraux de sa formule aident à diminuer l'apparence des ridules et des rides sans dessécher la peau. Texture veloutée et saturée, extrêmement facile à appliquer. Le SPF 20 protège la peau des rayons UV nocifs. Dure jusqu'à 12 heures.",
+      ar: 'كريم الأساس Skin Editor Matte غني بمزيج من المكونات الفعالة لعمل مطفي. المعادن الغنية في تركيبته تساعد على تقليل مظهر الخطوط الدقيقة والتجاعيد دون تجفيف البشرة. قوام مخملي مشبع، سهل التطبيق للغاية. SPF 20 يحمي البشرة من الأشعة فوق البنفسجية. يدوم حتى 12 ساعة.',
+    },
+    price: 82,
+    rating: 4.7,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/81874157_8681217229174-1-680x680.png?v=1702740446&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '80',
+    name: { fr: 'Absolute New York 2 in 1 Brow Perfecter', ar: 'أبسولوت نيويورك Brow Perfecter 2 في 1' },
+    category: { fr: 'Maquillage', ar: 'المكياج' },
+    description: {
+      fr: "Le Perfecteur Sourcils 2 en 1 ABSOLUTE offre un outil double-extrémité pour définir et remplir parfaitement les sourcils. La mine réfractaire et la pommade étanche avec sa mini brosse sont 100% sans parabène, sulfate, phtalate et parfum. Utilisez la mine pour peigner les sourcils, puis trempez la brosse dans la pommade avant de l'appliquer et de l'estomper. Remplissez les trous pour un arc parfait.",
+      ar: 'محسّن الحواجب 2 في 1 من ABSOLUTE يوفر أداة مزدوجة الطرفين لتحديد وملء الحواجب بشكل مثالي. المخروط المقاوم والمرهم المقاوم للماء مع فرشاته الصغيرة خالية 100% من البارابين والسلفات والفثالات والعطر. استخدمي المخروط لتمشيط الحواجب، ثم اغمسي الفرشاة في المرهم قبل تطبيقه ودمجه.',
+    },
+    price: 94,
+    rating: 4.7,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/AEBD04_1024x1024_6b8fd36d-f591-4f53-9f8c-25aa2de03f15.webp?v=1698495318&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '81',
+    name: { fr: 'Absolute New York Match Maker Jelly Rouge à Lèvres', ar: 'أبسولوت نيويورك Match Maker Jelly أحمر شفاه' },
+    category: { fr: 'Maquillage', ar: 'المكياج' },
+    description: {
+      fr: "Découvrez le rouge à lèvres Match Maker Jelly ABSOLUTE NEW YORK, conçu en quatre nouvelles teintes sublimées. Ce rouge à lèvres réagit au pH naturel des lèvres pour créer des couleurs personnalisées avec une finition sans effet collant. Chaque couleur est liée à une romance différente, et vos lèvres dégageront un parfum léger et rafraîchissant. Sans sulfate ni phtalate, ce produit est la touche finale pour les amoureux de la beauté.",
+      ar: 'اكتشفي أحمر الشفاه Match Maker Jelly من ABSOLUTE NEW YORK، مصمم بأربع درجات جديدة فاتنة. يتفاعل أحمر الشفاه هذا مع درجة الحموضة الطبيعية للشفاه لخلق ألوان مخصصة بلمسة نهائية غير لزجة. كل لون مرتبط برومانسية مختلفة، وستفوح من شفتيك رائحة عطرة منعشة. خالٍ من السلفات والفثالات.',
+    },
+    price: 95,
+    rating: 4.8,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/230503_MLMM03_MatchMaker_KS_1024x1024_0798fb8e-a68b-473a-8659-9cbb914cd6c0.webp?v=1698498497&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '82',
+    name: { fr: 'Absolute New York Second Skin Primer Drops', ar: 'أبسولوت نيويورك Second Skin قطرات البرايمر' },
+    category: { fr: 'Maquillage', ar: 'المكياج' },
+    description: {
+      fr: "Obtenez un teint brillant et velouté en hydratant votre peau grâce à l'huile de tournesol, de pépins de raisin et d'amande douce d'ABSOLUTE NEW YORK - Second Skin Primer Drops. Misez sur un primer qui offre une finition à la fois légère et délicate. Avec le sérum anti-âge ABSOLUTE NEW YORK - Second Skin Primer Drops, réduisez instantanément les ridules et défauts cutanés. Grâce à l'applicateur compte-gouttes, vous avez confort et contrôle total pour créer une base parfaite qui apportera une texture seconde peau et une finition légère à votre maquillage.",
+      ar: 'احصلي على بشرة مشرقة ومخملية بترطيب بشرتك بفضل زيت دوار الشمس وبذور العنب واللوز الحلو من ABSOLUTE NEW YORK - Second Skin Primer Drops. راهني على برايمر يقدم لمسة نهائية خفيفة وناعمة في آن. مع سيروم مكافحة الشيخوخة، قلّلي فوراً الخطوط الدقيقة وعيوب البشرة. بفضل التطبيق بقطارة، لديك راحة وتحكم كامل لإنشاء قاعدة مثالية تمنح ملمس البشرة الثانية ولمسة نهائية خفيفة لمكياجك.',
+    },
+    price: 150,
+    rating: 4.8,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/51_H9eotvvL.jpg?v=1698496332&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
 ]
 
 export const featuredProducts = mockProducts.slice(0, 12)
@@ -1178,6 +1313,42 @@ export const mockBrands: MockBrand[] = [
     },
   },
   {
+    id: 'topface',
+    name: 'Topface',
+    tagline: { fr: 'Maquillage longue tenue, formule hydratante', ar: 'مكياج يدوم طويلاً، تركيبة مرطبة' },
+    description: {
+      fr: "Topface est une marque de maquillage internationale offrant des fonds de teint, blush, mascaras, rouges à lèvres et soins des sourcils à des prix accessibles. Ses formules combinent tenue longue durée, hydratation et protection UV (SPF 20) pour un maquillage parfait au quotidien.",
+      ar: 'توب فيس علامة مكياج عالمية تقدم كريم الأساس، البلاش، الماسكارا، أحمر الشفاه وعناية الحواجب بأسعار في المتناول. تركيباتها تجمع بين الثبات الطويل والترطيب والحماية من الأشعة فوق البنفسجية (SPF 20) لمكياج مثالي يومياً.',
+    },
+    logo: 'https://haytamparfumerie.com/cdn/shop/files/32495439_Topface-Perfect-Coverage-Foundation-N-680x680.png?v=1702740759&width=200',
+    cover: 'https://haytamparfumerie.com/cdn/shop/files/32495439_Topface-Perfect-Coverage-Foundation-N-680x680.png?v=1702740759&width=1200',
+    origin: { fr: 'International', ar: 'دولية' },
+    productCount: 6,
+    spotlight: {
+      bgClass: 'bg-[#2a0e1f]',
+      accentClass: 'text-pink-300',
+      headlineFr: 'Maquillage longue tenue',
+    },
+  },
+  {
+    id: 'absolute-ny',
+    name: 'Absolute New York',
+    tagline: { fr: 'Beauté audacieuse, qualité professionnelle', ar: 'جمال جريء بجودة احترافية' },
+    description: {
+      fr: "Absolute New York est une marque américaine de maquillage professionnel qui propose des produits de haute qualité — primers, rouges à lèvres, soins des sourcils — sans parabène, sulfate ni phtalate. Inspirée de l'énergie créative de New York, elle s'adresse aux amoureux de la beauté qui veulent un maquillage tendance et performant.",
+      ar: 'أبسولوت نيويورك علامة مكياج احترافية أمريكية تقدم منتجات عالية الجودة — برايمر، أحمر شفاه، عناية الحواجب — خالية من البارابين والسلفات والفثالات. مستوحاة من الطاقة الإبداعية لنيويورك، تخاطب عشاق الجمال الذين يريدون مكياجاً عصرياً وفعّالاً.',
+    },
+    logo: 'https://haytamparfumerie.com/cdn/shop/files/AEBD04_1024x1024_6b8fd36d-f591-4f53-9f8c-25aa2de03f15.webp?v=1698495318&width=200',
+    cover: 'https://haytamparfumerie.com/cdn/shop/files/230503_MLMM03_MatchMaker_KS_1024x1024_0798fb8e-a68b-473a-8659-9cbb914cd6c0.webp?v=1698498497&width=1200',
+    origin: { fr: 'États-Unis', ar: 'الولايات المتحدة' },
+    productCount: 3,
+    spotlight: {
+      bgClass: 'bg-[#1a0e2a]',
+      accentClass: 'text-fuchsia-300',
+      headlineFr: 'Beauté professionnelle de NY',
+    },
+  },
+  {
     id: 'disaar',
     name: 'Disaar',
     tagline: { fr: 'Coloration capillaire aux extraits naturels', ar: 'صبغة شعر بمكونات طبيعية' },
@@ -1217,6 +1388,10 @@ mockProducts.forEach((p, i) => {
   else if (/\bgarnier\b/i.test(p.name.fr) || /\bfructis\b/i.test(p.name.fr)) p.brandId = 'garnier'
   // Disaar products → Disaar brand
   else if (/\bdisaar\b/i.test(p.name.fr)) p.brandId = 'disaar'
+  // Topface products → Topface brand
+  else if (/\btopface\b/i.test(p.name.fr)) p.brandId = 'topface'
+  // Absolute New York products → Absolute NY brand
+  else if (/\babsolute\s*(new\s*york|ny)?\b/i.test(p.name.fr)) p.brandId = 'absolute-ny'
   // Sunscreen products always go to Soleil Dorée
   else if (p.category.fr === 'Protection solaire') p.brandId = 'soleil-doree'
   // Moroccan products (perfumes, argan-based) go to Rose d'Orient
