@@ -823,6 +823,96 @@ export const mockProducts: MockProduct[] = [
     badge: { fr: 'Bestseller', ar: 'الأكثر مبيعاً' },
     isBestSeller: true,
   },
+  {
+    id: '66',
+    name: {
+      fr: "Johnson's Baby Shampoo 500ml",
+      ar: 'جونسون شامبو الأطفال 500 مل',
+    },
+    category: { fr: 'Cheveux', ar: 'العناية بالشعر' },
+    description: {
+      fr: "Johnson's Baby Shampoo 500ml est le choix parfait pour les parents soucieux de la santé et du bien-être de leur bébé. Ce shampoing doux pour la peau délicate de bébé est spécialement formulé pour des cheveux sains, lisses et propres. Il est sans danger pour les yeux (formule sans larmes) et offre un excellent soin quotidien pour garder les enfants propres et frais.",
+      ar: 'شامبو جونسون للأطفال 500 مل الخيار المثالي للوالدين المهتمين بصحة وعافية طفلهم. هذا الشامبو اللطيف على بشرة الطفل الحساسة، مُصمَّم خصيصاً لشعر صحي وناعم ونظيف. آمن على العينين (تركيبة بدون دموع) ويوفر عناية يومية ممتازة للحفاظ على نظافة الأطفال وانتعاشهم.',
+    },
+    price: 30,
+    rating: 4.6,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/white-61cczaeSTLL._AC_SL1500.jpg?v=1729080558&width=493',
+    badge: { fr: 'Bestseller', ar: 'الأكثر مبيعاً' },
+    isBestSeller: true,
+  },
+  {
+    id: '67',
+    name: {
+      fr: "Johnson's Chamomile Baby Shampoo 200ml",
+      ar: 'جونسون شامبو الأطفال بالبابونج 200 مل',
+    },
+    category: { fr: 'Cheveux', ar: 'العناية بالشعر' },
+    description: {
+      fr: "Découvrez le shampooing pour bébé à la camomille Johnson's de 200 ml. Sa formule unique, enrichie en camomille, nettoie en douceur les cheveux délicats de bébé, tout en apaisant le cuir chevelu et en laissant une odeur délicatement parfumée. Offrez à votre bébé des soins capillaires de qualité avec Johnson's.",
+      ar: 'اكتشفي شامبو الأطفال بالبابونج من جونسون 200 مل. تركيبته الفريدة الغنية بالبابونج تنظف بلطف شعر طفلك الناعم، مع تهدئة فروة الرأس وترك رائحة عطرة لطيفة. امنحي طفلك عناية شعر عالية الجودة مع جونسون.',
+    },
+    price: 25,
+    rating: 4.7,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/white-71C4nq083zL._AC_SL1500.jpg?v=1729081151&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '68',
+    name: {
+      fr: 'Disaar Shampooing Colorant Marron Ginseng & Huile de Serpent 400ml',
+      ar: 'ديسار شامبو ملوّن بني بالجينسنغ وزيت الثعبان 400 مل',
+    },
+    category: { fr: 'Cheveux', ar: 'العناية بالشعر' },
+    description: {
+      fr: "Capacité 400 ml, pratique pour votre usage domestique quotidien. Non gras, agréable à utiliser.\n\n• Extraits de plantes pures qui améliorent les composants chimiques endommageant les cheveux et la peau.\n• Facile à utiliser : portez des gants, pressez le shampooing, frottez quelques minutes comme un shampooing ordinaire.\n• Colore rapidement les cheveux gris et les couvre instantanément, laissant les cheveux brillants.\n• Ingrédients sûrs, doux et non irritants — n'endommage pas le cuir chevelu ni les cheveux.",
+      ar: 'سعة 400 مل، عملي للاستخدام المنزلي اليومي. غير دهني ومريح.\n\n• خلاصات نباتية نقية تحسّن المكونات الكيميائية المضرة بالشعر والبشرة.\n• سهل الاستخدام: ارتدي القفازات، اضغطي على الشامبو، افركي لبضع دقائق كشامبو عادي.\n• يصبغ الشعر الرمادي بسرعة ويغطيه فوراً، تاركاً الشعر لامعاً.\n• مكونات آمنة ولطيفة وغير مهيجة — لا تضر فروة الرأس أو الشعر.',
+    },
+    price: 50,
+    rating: 4.4,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/disaar-shampooing-colorant-marron-pour-cheveux-a-base-de-ginseng-et-d-huile-de-serpent-pour-couvrir-les-cheveux-gris-blancs.jpg?v=1703094170&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '69',
+    name: {
+      fr: 'Garnier Fructis Aloe Vera Hydra Bomb Shampoo 400ml',
+      ar: 'غارنييه فروكتيس Aloe Vera Hydra Bomb شامبو 400 مل',
+    },
+    category: { fr: 'Cheveux', ar: 'العناية بالشعر' },
+    description: {
+      fr: "Essayez le Shampooing Hydratant Garnier Fructis Aloe Vera Hydra Bomb ! Formulé spécialement pour les cheveux normaux, il contient de l'extrait d'Aloe Vera et de la Glycérine Végétale qui offrent une hydratation optimale. Une hydratation explosive pour des cheveux nourris et doux !",
+      ar: 'جربي شامبو غارنييه فروكتيس Aloe Vera Hydra Bomb المرطّب! مُصمَّم خصيصاً للشعر العادي، يحتوي على خلاصة الألوفيرا والجلسرين النباتي اللذين يوفران ترطيباً مثالياً. ترطيب انفجاري لشعر مغذّى وناعم!',
+    },
+    price: 35,
+    rating: 4.5,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/garnier-fructis-aloe-vera-hydra-bomb-hydrating-shampoo-400ml.jpg?v=1701132946&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '70',
+    name: {
+      fr: 'Garnier Fructis Liso & Brillo Shampoo',
+      ar: 'غارنييه فروكتيس Liso & Brillo شامبو',
+    },
+    category: { fr: 'Cheveux', ar: 'العناية بالشعر' },
+    description: {
+      fr: "Le shampooing Garnier Fructis Liso & Brillo redonne brillance et vigueur à vos cheveux. Son concentré de fruits actif (extrait de zeste de citron, vitamines et nutriments des fruits) nourrit et renforce la fibre capillaire et le cuir chevelu en profondeur.",
+      ar: 'شامبو غارنييه فروكتيس Liso & Brillo يعيد البريق والحيوية لشعرك. مركز الفواكه الفعّال (خلاصة قشر الليمون، الفيتامينات والعناصر الغذائية للفواكه) يغذي ويقوي خصلة الشعر وفروة الرأس في العمق.',
+    },
+    price: 35,
+    rating: 4.5,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/3600542024204.webp?v=1701133096&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
 ]
 
 export const featuredProducts = mockProducts.slice(0, 12)
@@ -990,6 +1080,60 @@ export const mockBrands: MockBrand[] = [
       headlineFr: 'L\'art capillaire japonais',
     },
   },
+  {
+    id: 'johnsons',
+    name: "Johnson's",
+    tagline: { fr: 'La douceur depuis 1894', ar: 'اللطف منذ 1894' },
+    description: {
+      fr: "Johnson's est la marque pédiatrique américaine de référence, fondée en 1894 et présente dans des millions de foyers à travers le monde. Sa gamme de soins pour bébés — shampooings, gels lavants, lotions hydratantes — est formulée avec une douceur extrême, sans larmes, hypoallergénique, et testée sous contrôle pédiatrique. La référence en soins infantiles.",
+      ar: 'جونسون العلامة الأمريكية الرائدة في عناية الأطفال، تأسست عام 1894 وموجودة في ملايين البيوت حول العالم. مجموعة عناية الأطفال — شامبوهات، جل غسول، لوشن مرطب — مصممة بلطف فائق، بدون دموع، مضادة للحساسية، ومختبرة تحت إشراف طب الأطفال. المرجع في عناية الأطفال.',
+    },
+    logo: 'https://haytamparfumerie.com/cdn/shop/files/white-61cczaeSTLL._AC_SL1500.jpg?v=1729080558&width=200',
+    cover: 'https://haytamparfumerie.com/cdn/shop/files/white-71C4nq083zL._AC_SL1500.jpg?v=1729081151&width=1200',
+    origin: { fr: 'États-Unis', ar: 'الولايات المتحدة' },
+    productCount: 2,
+    spotlight: {
+      bgClass: 'bg-[#3d5e8c]',
+      accentClass: 'text-amber-100',
+      headlineFr: 'Pour la peau délicate de bébé',
+    },
+  },
+  {
+    id: 'garnier',
+    name: 'Garnier',
+    tagline: { fr: 'La nature au cœur de chaque flacon', ar: 'الطبيعة في قلب كل قنينة' },
+    description: {
+      fr: "Garnier est une marque française historique du groupe L'Oréal, célèbre pour ses formules naturelles et accessibles. Ses gammes Fructis (cheveux), Skin Active (visage), Ambre Solaire (solaire) et Color Naturals (coloration) puisent dans la science et la nature : aloe vera, vitamine C, charbon végétal, eaux florales. Beauté efficace pour toutes.",
+      ar: 'غارنييه علامة فرنسية تاريخية من مجموعة لوريال، مشهورة بتركيباتها الطبيعية والمتاحة للجميع. مجموعاتها فروكتيس (الشعر)، سكين أكتيف (الوجه)، أمبر سولير (الحماية الشمسية) وكولور ناتشورالز (الصبغة) تستلهم من العلم والطبيعة: ألوفيرا، فيتامين سي، فحم نباتي، مياه زهور. جمال فعّال للجميع.',
+    },
+    logo: 'https://haytamparfumerie.com/cdn/shop/files/garnier-fructis-aloe-vera-hydra-bomb-hydrating-shampoo-400ml.jpg?v=1701132946&width=200',
+    cover: 'https://haytamparfumerie.com/cdn/shop/files/3600542024204.webp?v=1701133096&width=1200',
+    origin: { fr: 'France', ar: 'فرنسا' },
+    productCount: 2,
+    spotlight: {
+      bgClass: 'bg-[#0e3b1c]',
+      accentClass: 'text-lime-300',
+      headlineFr: 'La nature au cœur de la beauté',
+    },
+  },
+  {
+    id: 'disaar',
+    name: 'Disaar',
+    tagline: { fr: 'Coloration capillaire aux extraits naturels', ar: 'صبغة شعر بمكونات طبيعية' },
+    description: {
+      fr: "Disaar propose des shampooings colorants innovants à base d'extraits de plantes (ginseng, huile de serpent) pour couvrir les cheveux gris efficacement en quelques minutes. Formulation douce sans ammoniaque agressive, faciles à utiliser à domicile, ils colorent tout en respectant la fibre capillaire et le cuir chevelu.",
+      ar: 'ديسار يقدم شامبوهات صبغ مبتكرة بخلاصات نباتية (الجينسنغ، زيت الثعبان) لتغطية الشعر الرمادي بفعالية في دقائق. تركيبة لطيفة بدون أمونيا قاسية، سهلة الاستخدام في المنزل، تصبغ مع احترام بنية الشعر وفروة الرأس.',
+    },
+    logo: 'https://haytamparfumerie.com/cdn/shop/files/disaar-shampooing-colorant-marron-pour-cheveux-a-base-de-ginseng-et-d-huile-de-serpent-pour-couvrir-les-cheveux-gris-blancs.jpg?v=1703094170&width=200',
+    cover: 'https://haytamparfumerie.com/cdn/shop/files/disaar-shampooing-colorant-marron-pour-cheveux-a-base-de-ginseng-et-d-huile-de-serpent-pour-couvrir-les-cheveux-gris-blancs.jpg?v=1703094170&width=1200',
+    origin: { fr: 'Chine', ar: 'الصين' },
+    productCount: 1,
+    spotlight: {
+      bgClass: 'bg-[#3d1a14]',
+      accentClass: 'text-amber-300',
+      headlineFr: 'Coloration naturelle express',
+    },
+  },
 ]
 
 // Assign products to brands — smart category-based rules
@@ -1006,6 +1150,12 @@ mockProducts.forEach((p, i) => {
   else if (/\bvichy\b/i.test(p.name.fr) || /\bdercos\b/i.test(p.name.fr)) p.brandId = 'vichy'
   // Fino products → Fino brand
   else if (/\bfino\b/i.test(p.name.fr)) p.brandId = 'fino'
+  // Johnson's products → Johnson's brand
+  else if (/\bjohnson'?s?\b/i.test(p.name.fr)) p.brandId = 'johnsons'
+  // Garnier products → Garnier brand (includes Fructis line)
+  else if (/\bgarnier\b/i.test(p.name.fr) || /\bfructis\b/i.test(p.name.fr)) p.brandId = 'garnier'
+  // Disaar products → Disaar brand
+  else if (/\bdisaar\b/i.test(p.name.fr)) p.brandId = 'disaar'
   // Sunscreen products always go to Soleil Dorée
   else if (p.category.fr === 'Protection solaire') p.brandId = 'soleil-doree'
   // Moroccan products (perfumes, argan-based) go to Rose d'Orient
