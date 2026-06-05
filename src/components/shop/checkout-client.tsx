@@ -64,35 +64,53 @@ export function CheckoutClient() {
     return Object.keys(newErrors).length === 0
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     if (!validate()) return
 
     setSubmitting(true)
-    // Generate order number
     const orderNumber = `GB${Date.now().toString().slice(-8)}`
 
-    // Save order details to sessionStorage for confirmation page
+    const orderItems = items.map((item) => ({
+      name: item.product.name,
+      quantity: item.quantity,
+      price: item.product.price,
+      image: item.product.image,
+    }))
+
     sessionStorage.setItem('lastOrder', JSON.stringify({
       orderNumber,
       ...form,
-      items: items.map((item) => ({
-        name: item.product.name,
-        quantity: item.quantity,
-        price: item.product.price,
-        image: item.product.image,
-      })),
+      items: orderItems,
       subtotal,
       shippingCost,
       total,
       timestamp: Date.now(),
     }))
 
-    // Simulate processing
-    setTimeout(() => {
-      clearCart()
-      router.push(`${base}/confirmation?order=${orderNumber}`)
-    }, 1200)
+    try {
+      await fetch('/api/orders/sheet', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          orderNumber,
+          name: form.name,
+          phone: form.phone,
+          city: form.city,
+          address: form.address,
+          notes: form.notes,
+          items: orderItems.map(({ name, quantity, price }) => ({ name, quantity, price })),
+          subtotal,
+          shippingCost,
+          total,
+        }),
+      })
+    } catch (err) {
+      console.error('Order webhook failed:', err)
+    }
+
+    clearCart()
+    router.push(`${base}/confirmation?order=${orderNumber}`)
   }
 
   if (!mounted || items.length === 0) {
