@@ -769,6 +769,60 @@ export const mockProducts: MockProduct[] = [
     badge: { fr: 'Nouveau', ar: 'جديد' },
     isNew: true,
   },
+  {
+    id: '63',
+    name: {
+      fr: 'Fino Premium Touch Shampoo 550ml',
+      ar: 'فينو بريميام تاتش شامبو 550 مل',
+    },
+    category: { fr: 'Cheveux', ar: 'العناية بالشعر' },
+    description: {
+      fr: "Le shampoing Fino Premium Touch est idéal pour traiter les cheveux secs et abîmés par les changements climatiques, les rayons UV et les cheveux colorés ou permanentés.\n\nPour tous types de cheveux — Fabriqué au Japon\n\nIngrédients clés :\n• Gelée royale EX pour hydrater\n• PCA pour renforcer\n• Lipidure EX pour réparer",
+      ar: 'شامبو فينو بريميام تاتش مثالي لمعالجة الشعر الجاف والتالف بسبب التغيرات المناخية وأشعة UV والشعر المصبوغ أو المعالج كيميائياً.\n\nلجميع أنواع الشعر — صُنع في اليابان\n\nمكونات أساسية:\n• هلام ملكي EX للترطيب\n• PCA للتقوية\n• Lipidure EX للإصلاح',
+    },
+    price: 220,
+    rating: 4.9,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/Screenshot_195.png?v=1756754067&width=493',
+    badge: { fr: 'Bestseller', ar: 'الأكثر مبيعاً' },
+    isBestSeller: true,
+  },
+  {
+    id: '64',
+    name: {
+      fr: 'Vichy Dercos Shampooing Anti-Pelliculaire DS Cheveux Secs 200ml',
+      ar: 'فيشي ديركوس شامبو ضد القشرة DS للشعر الجاف 200 مل',
+    },
+    category: { fr: 'Cheveux', ar: 'العناية بالشعر' },
+    description: {
+      fr: "Shampooing Traitant Anti-Pelliculaire DS de la gamme Dercos Technique de Vichy, spécifiquement formulé pour les cheveux secs et le cuir chevelu sensible sujets aux pellicules et aux démangeaisons.\n\n✨ Actions clés :\n• Élimination des pellicules : agit efficacement dès la première application\n• Action anti-récidive : prévient la réapparition pendant jusqu'à 6 semaines (cure de 4 semaines)\n• Apaise le cuir chevelu sensible",
+      ar: 'شامبو علاجي ضد القشرة DS من مجموعة ديركوس تكنيك من فيشي، مُصمَّم خصيصاً للشعر الجاف وفروة الرأس الحساسة المعرضة للقشرة والحكة.\n\n✨ المفعول الرئيسي:\n• القضاء على القشرة: يعمل بفعالية منذ الاستخدام الأول\n• فعل مضاد للتكرار: يمنع عودة الظهور لمدة تصل إلى 6 أسابيع (دورة 4 أسابيع)\n• يهدّئ فروة الرأس الحساسة',
+    },
+    price: 125,
+    rating: 4.7,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/Design_sans_titre_-_2025-12-02T125514.831.png?v=1764676713&width=493',
+    badge: { fr: 'Nouveau', ar: 'جديد' },
+    isNew: true,
+  },
+  {
+    id: '65',
+    name: {
+      fr: 'Vichy Dercos Technique Shampooing ENERGY+ Anti-Chute 200ml',
+      ar: 'فيشي ديركوس تكنيك شامبو ENERGY+ ضد تساقط الشعر 200 مل',
+    },
+    category: { fr: 'Cheveux', ar: 'العناية بالشعر' },
+    description: {
+      fr: "Le shampooing Dercos Technique Energy+ anti-chute de cheveux convient à tous types de cheveux. Sa formule réduit la chute des cheveux tout en leur apportant force et vigueur. Avec un lavage en douceur, il laisse les cheveux propres et sains. Un produit essentiel pour lutter contre la perte de cheveux.",
+      ar: 'شامبو ديركوس تكنيك Energy+ ضد تساقط الشعر مناسب لجميع أنواع الشعر. تركيبته تقلل من تساقط الشعر مع منحه القوة والحيوية. بغسيل لطيف، يترك الشعر نظيفاً وصحياً. منتج ضروري لمكافحة تساقط الشعر.',
+    },
+    price: 120,
+    rating: 4.8,
+    reviews: 0,
+    image: 'https://haytamparfumerie.com/cdn/shop/files/DERCOS_TECHNIQUE_Shampooing_ENERGY_Anti-Chute_200_ML.jpg?v=1728992057&width=493',
+    badge: { fr: 'Bestseller', ar: 'الأكثر مبيعاً' },
+    isBestSeller: true,
+  },
 ]
 
 export const featuredProducts = mockProducts.slice(0, 12)
@@ -900,6 +954,42 @@ export const mockBrands: MockBrand[] = [
       headlineFr: 'Pharmacie allemande depuis 1900',
     },
   },
+  {
+    id: 'vichy',
+    name: 'Vichy',
+    tagline: { fr: 'La santé est belle', ar: 'الصحة هي الجمال' },
+    description: {
+      fr: "Vichy est une marque dermatologique française pionnière, née de l'eau thermale volcanique de Vichy aux minéraux fortifiants. Recommandée par les dermatologues, elle développe des soins du visage, du corps et des cheveux d'efficacité prouvée pour les peaux et cuirs chevelus sensibles. Ses gammes Dercos, Liftactiv, Minéral 89, Capital Soleil et Normaderm allient science, sécurité et résultats visibles.",
+      ar: 'فيشي علامة جلدية فرنسية رائدة، وُلدت من مياه فيشي الحرارية البركانية الغنية بالمعادن المقوية. موصى بها من قبل أطباء الجلد، تطوّر منتجات عناية بالوجه والجسم والشعر بفعالية مُثبتة للبشرات وفروات الرأس الحساسة. مجموعاتها ديركوس، ليفتاكتيف، مينرال 89، كابيتال سولي ونورمادرم تجمع بين العلم والأمان والنتائج المرئية.',
+    },
+    logo: 'https://haytamparfumerie.com/cdn/shop/files/Design_sans_titre_-_2025-12-02T125514.831.png?v=1764676713&width=200',
+    cover: 'https://haytamparfumerie.com/cdn/shop/files/DERCOS_TECHNIQUE_Shampooing_ENERGY_Anti-Chute_200_ML.jpg?v=1728992057&width=1200',
+    origin: { fr: 'France', ar: 'فرنسا' },
+    productCount: 2,
+    spotlight: {
+      bgClass: 'bg-[#0d3b66]',
+      accentClass: 'text-sky-200',
+      headlineFr: 'La science thermale française',
+    },
+  },
+  {
+    id: 'fino',
+    name: 'Fino',
+    tagline: { fr: 'La perfection capillaire japonaise', ar: 'إتقان العناية بالشعر اليابانية' },
+    description: {
+      fr: "Fino est une marque japonaise haut de gamme du groupe Shiseido, dédiée aux soins capillaires intensifs. Ses formules raffinées combinent la gelée royale EX, le PCA et le Lipidure EX pour offrir aux cheveux secs, abîmés, colorés ou permanentés une réparation en profondeur et une brillance soyeuse. Made in Japan, l'expression du savoir-faire cosmétique nippon.",
+      ar: 'فينو علامة يابانية فاخرة من مجموعة شيسيدو، مخصصة للعناية المكثفة بالشعر. تركيباتها الراقية تجمع بين الهلام الملكي EX و PCA و Lipidure EX لتقديم إصلاح عميق ولمعان حريري للشعر الجاف والتالف والمصبوغ أو المعالج كيميائياً. صُنع في اليابان، تعبير عن الحرفية اليابانية في التجميل.',
+    },
+    logo: 'https://haytamparfumerie.com/cdn/shop/files/Screenshot_195.png?v=1756754067&width=200',
+    cover: 'https://haytamparfumerie.com/cdn/shop/files/Screenshot_195.png?v=1756754067&width=1200',
+    origin: { fr: 'Japon', ar: 'اليابان' },
+    productCount: 1,
+    spotlight: {
+      bgClass: 'bg-[#1a0e1a]',
+      accentClass: 'text-pink-300',
+      headlineFr: 'L\'art capillaire japonais',
+    },
+  },
 ]
 
 // Assign products to brands — smart category-based rules
@@ -912,6 +1002,10 @@ mockProducts.forEach((p, i) => {
   else if (/\bbioderma\b/i.test(p.name.fr)) p.brandId = 'bioderma'
   // Eucerin products → Eucerin brand
   else if (/\beucerin\b/i.test(p.name.fr)) p.brandId = 'eucerin'
+  // Vichy products (including Dercos line which is a Vichy sub-brand)
+  else if (/\bvichy\b/i.test(p.name.fr) || /\bdercos\b/i.test(p.name.fr)) p.brandId = 'vichy'
+  // Fino products → Fino brand
+  else if (/\bfino\b/i.test(p.name.fr)) p.brandId = 'fino'
   // Sunscreen products always go to Soleil Dorée
   else if (p.category.fr === 'Protection solaire') p.brandId = 'soleil-doree'
   // Moroccan products (perfumes, argan-based) go to Rose d'Orient
